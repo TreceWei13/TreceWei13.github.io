@@ -1,4 +1,5 @@
-http://example.com/2019/05/20/%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%B8%80%E7%AF%87/
+http://example.com/2019/06/01/%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%BA%8C%E7%AF%87/
+http://example.com/2019/05/23/%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%B8%80%E7%AF%87/
 http://example.com/2019/05/20/%E7%AC%AC%E5%9B%9B%E5%8D%81%E7%AF%87/
 http://example.com/2019/05/16/%E7%AC%AC%E4%B8%89%E5%8D%81%E4%B9%9D%E7%AF%87/
 http://example.com/2019/05/13/%E7%AC%AC%E4%B8%89%E5%8D%81%E5%85%AB%E7%AF%87/
