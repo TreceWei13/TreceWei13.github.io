@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="vue概念"><meta name="keywords" content="vue"><meta name="author" content="ChengWei"><meta name="copyright" content="ChengWei"><title>vue概念 | Chengcw'博客</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.1"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://v1.hitokoto.cn/?encode=js&amp;charset=utf-8&amp;select=.footer_custom_text" defer></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  hexoVersion: '5.4.2'
+} </script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Chengcw'博客" type="application/atom+xml">
+</head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://wx2.sinaimg.cn/thumb150/008soxMJly1h0v1m20khej30u00u0td0.jpg"></div><div class="author-info__name text-center">ChengWei</div><div class="author-info__description text-center"></div><div class="follow-button"><a target="_blank" rel="noopener" href="https://github.com/USERNAME">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">27</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">14</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">11</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://wx3.sinaimg.cn/mw2000/a2f664a9gy1h4uh0xyosrj219i1kwk6d.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Chengcw'博客</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">首页</a><a class="site-page" href="/archives">文章</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">vue概念</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-02-19</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/vue/">vue</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>vue是什么？</p>
+<p>vue一套用于构建用户界面的渐进式javascript框架</p>
+<p>vue是谁开发的？</p>
+<p>尤玉溪</p>
+<p>vue的特点</p>
+<p>1.采用组件化模式，提高代码复用率且让代码更好维护</p>
+<p>2.声明式代码，让编码人员无需直接操作DOM，提高开发效率</p>
+<p>3.使用虚拟DOM+优秀的diff算法，尽量复用DOM节点。</p>
+<p>学习vue之前要掌握的javascript基础知识？</p>
+<p>es6语法规范，ES6模块化，包管理器，原型，原型链，数组常用方法，axios,promise ……</p>
+<p>vue网址</p>
+<p>Vue.js</p>
+<p>Creating a Project | Vue CLI</p>
+<p>下载</p>
+<p>安装 — Vue.js</p>
+<p>添加vue扩展组件（找到的）</p>
+<p>在谷歌Chrome浏览器中添加vue.js扩展组件_橙之殇的博客-CSDN博客_chrome vue 扩展</p>
+<p>百度网盘 请输入提取码 提取码为6gct</p>
+<p>关闭提示</p>
+ <script type="text/javascript">
+
+      vue.config.productionTip=false //阻止vue在启动时生产提示
+
+    </script>
+
+<p>el用于指定当前vue实例为哪个容器服务，值通常为CSS选择器字符串</p>
+<p>data用于存储数据，数据供el指定容器去使用，值我们暂时写成一个对象。</p>
+<p>vue模板语法：分为两种1.插值语法2.指令语法</p>
+<p>1.插值语法：功能用于解析标签体内容</p>
+<p>写法：，xxx是js表达式，且可以直接读到data中的所有属性</p>
+<p>2.指令语法：功能用于解析标签（包括：标签属性，标签体内容，绑定事件……）。</p>
+<p>举例:v-bind:href=”xxx”或简写为：href=“xxx”，xxx同样要写js表达式。</p>
+<p>备注：vue中有很多指令且形势都是v-????。</p>
+<p>vue中有两种数据绑定的方式</p>
+<p>1.单向绑定（v-bind）：数据只能从data流向页面</p>
+<p>2.双向绑定（v-model）：数据不仅能从data流向页面，还可以从页面流向data。</p>
+<p>备注：1.双向绑定一般都应在表单类元素上（如：input，select等）</p>
+<p>2.v-model：value可以简写为v-model，因为v-model默认收集的就是value值</p>
+<p>el和data的两种写法</p>
+<p>el有两种写法</p>
+<p>1.new vue时候配置el属性</p>
+<p>2.先创建vue实例，随后再通过vm.$mount(‘#root’)指定el的值</p>
+<p>data有两种写法1.对象式 2.函数式</p>
+<p>如何选择：目前哪种写法都可以，以后学习到组件时，data必须使用函数式，否则就会报错</p>
+<p>一个重要原则：由vue管理的函数。一定不要写箭头函数，一旦写了箭头函数，this就不再是vue实例了</p>
+<p>el的两种写法</p>
+<p>const v=new vue({</p>
+<p>el:’root’,//第一种</p>
+<p>data：{</p>
+<p>name:’程程呀’</p>
+<p>}</p>
+<p>})</p>
+<p>console.log(v)</p>
+<p>v.$mount(‘#root’)//第二种</p>
+<p>data的两种写法</p>
+<p>new vue（{</p>
+<p>el:’#root’</p>
+<p>//data的第一种写法：对象式</p>
+<p>data:{</p>
+<p>name:’程程呀’</p>
+<p>}</p>
+<p>//data的第二种写法：函数式</p>
+<p>data(){</p>
+<p>console.log(‘@@@’,this)//此处this是vue实例对象</p>
+<p>return{</p>
+<p>name:’程程呀’</p>
+<p>}</p>
+<p>}</p>
+<p>}）</p>
+<p>MVVM模型</p>
+<p>m:模型（model）：data中的数据</p>
+<p>v:视图（view）：模板代码</p>
+<p>vm：视图模型（viewmodel）：vue实例</p>
+<p>观察发现：1.data中所有属性，最后都出现在vm身上</p>
+<p>2.vm身上所有的属性及vue原型上所有属性，在vue模板中都可以直接使用</p>
+<p>事件的基本使用：</p>
+<p>1.使用v-on：xxx或者@xxx绑定事件，其中xxx是事件名</p>
+<p>2.事件的回调需要配置methods对象中，最终会在vm上</p>
+<p>3.methods中配置的函数，不需要箭头函数！否则this就不是vm了</p>
+<p>4.methods中配置的函数，都是被vm所管理的函数，this指向是vm或者组件实例对象</p>
+<p>5.@click=“demo”和@click=“demo（$event）”效果一致。但后者可以传参</p>
+<p>vue中的事件修饰符：</p>
+<p>1.prevent：阻止默认事件（常用）</p>
+<p>2.stop：阻止事件冒泡（常用）</p>
+<p>3.once：事件只触发一次（常用）</p>
+<p>4.capture：使用事件的捕获模式：</p>
+<p>5.self：只有event，target是当前操作的元素是才触发事件</p>
+<p>6.passive：事件的默认行为当即执行，无需等待时间回调执行完毕；</p>
+<p>vue中常用的按键别名</p>
+<p>回车=&gt;enter</p>
+<p>删除=&gt;delete（捕获“删除”和“退格”键）</p>
+<p>退出=&gt;esc</p>
+<p>空格=&gt;space</p>
+<p>换行=&gt;tab</p>
+<p>上=&gt;up</p>
+<p>下=&gt;down</p>
+<p>左=&gt;left</p>
+<p>右=&gt;right</p>
+<p>2.vue未提供别名的按键，可以使用按键原始的key值去绑定，但注意要转为kebab-case（短横线命名）</p>
+<p>3.系统修饰符（用法特殊）Ctrl，alt，shift，meta</p>
+<p>3.1配合keyup使用：按下修饰符键的同时，再按下其他键，随后释放其他键，时间才被触发</p>
+<p>3.2配合keydown使用：正常触发时间</p>
+<p>4.也可以使用keycode去指定具体按键（不推荐）</p>
+<p>5.vue，config,keycodes,自定义键名=键码， 可以去定制按键别名</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">ChengWei</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2019/02/19/第二十五篇/">http://example.com/2019/02/19/第二十五篇/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/vue/">vue</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2019/03/02/%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%83%E7%AF%87/"><i class="fa fa-chevron-left">  </i><span>Vue element ui的二次封装</span></a></div><div class="next-post pull-right"><a href="/2019/02/15/%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%9B%9B%E7%AF%87/"><span>vue中使用echarts实现动态数据绑定、获取后端接口数据</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://wx3.sinaimg.cn/mw2000/a2f664a9gy1h4uh0xyosrj219i1kwk6d.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2018 - 2022 By ChengWei</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">hitokoto</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/lib/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.1"></script><script src="/js/fancybox.js?version=1.9.1"></script><script src="/js/sidebar.js?version=1.9.1"></script><script src="/js/copy.js?version=1.9.1"></script><script src="/js/fireworks.js?version=1.9.1"></script><script src="/js/transition.js?version=1.9.1"></script><script src="/js/scroll.js?version=1.9.1"></script><script src="/js/head.js?version=1.9.1"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>
