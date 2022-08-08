@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="前端项目性能优化方案有哪些"><meta name="keywords" content="vue"><meta name="author" content="ChengWei"><meta name="copyright" content="ChengWei"><title>前端项目性能优化方案有哪些 | Chengcw'博客</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.1"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://v1.hitokoto.cn/?encode=js&amp;charset=utf-8&amp;select=.footer_custom_text" defer></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  hexoVersion: '5.4.2'
+} </script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Chengcw'博客" type="application/atom+xml">
+</head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://wx2.sinaimg.cn/thumb150/008soxMJly1h0v1m20khej30u00u0td0.jpg"></div><div class="author-info__name text-center">ChengWei</div><div class="author-info__description text-center"></div><div class="follow-button"><a target="_blank" rel="noopener" href="https://github.com/USERNAME">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">40</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">15</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">12</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://wx3.sinaimg.cn/mw2000/a2f664a9gy1h4uh0xyosrj219i1kwk6d.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Chengcw'博客</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">首页</a><a class="site-page" href="/archives">文章</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">前端项目性能优化方案有哪些</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-03-22</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/vue/">vue</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p><b>一、 加载优化（减少http请求数）</b><br>常用的减少http请求数有以下几种：</p>
+<ol>
+<li><p>合并图片：当图片较多时，像精灵图，雪碧图可以合并为一张大图，从而减少http请求数。经常变化的图片可能不太合适，变化相对稳定的就可以考虑。合并大图除了能减少http 请求数外，还可以充分利用缓存来提升性能。</p>
+</li>
+<li><p>合并压缩css样式表和js脚本，他们的共同目的都是为了减少http连接数。</p>
+</li>
+<li><p>去掉不必要的请求，开发写代码或者系统升级之后残留的无效请求连接。</p>
+</li>
+<li><p>首屏加载：首屏快速显示可大大的提升用户对页面速度的感知，应尽量针对首屏的快速显示做出相应的优化。</p>
+</li>
+<li><p>充分利用缓存：来减少向服务器发送的请求数，节省网络资源，所有静态资源都要放在服务器端并设置缓存，并且要尽量使用长缓存。</p>
+</li>
+<li><p> 预加载：大型资源页面可使用Loading，资源加载完成后再显示页面，但是加载时间过长，会造成负体验。</p>
+</li>
+<li><p>异步加载第三方资源：第三方资源不可控，会影响页面加载，所以要异步加载第三方资源。</p>
+</li>
+</ol>
+<p><b>二、图片优化</b><br>优化方法：</p>
+<ol>
+<li><p>尽可能的使用PNG格式的图片，它相对来说体积较小，可以使用工具压缩，在上线之前最好进行一定的优化。</p>
+</li>
+<li><p>同时在代码中进行图片的延迟加载，也叫做赖加载。</p>
+</li>
+<li><p>避免img、iframe等标签的src属性为空：空src会重新加载当前页面，影响速度和效率。</p>
+</li>
+<li><p>图像尽量避免使用DataURL：DataURL图像没有使用图像压缩算法，文件会变大，并且要解码后再渲染，加载慢耗时长。</p>
+</li>
+</ol>
+<p><b>三、使用CDN</b></p>
+<p>CDN：实现把内容从中心媒体服务器分发到边缘服务器的网络体系即内容分发网络，CDN具有更低的网络延迟和丢包率，能够分配负载，节省带宽提高网站的性能，可以使用户就近取得所需内容，解决网络拥挤的状况，提高用户访问网站的响应速度。</p>
+<p>如果安全性对你的网站很重要，就不要使用公共的CDN，因为当你远程从CDN请求文件时，你的访问来源信息也被发送过去，一些远程的js文件可能被修改用来搜集你的用户或者系统信息，而当你使用https协议时，能选择的CDN就更加有限。</p>
+<p><b>四、开启Gzip（代码压缩）</b><br>Gzip即数据压缩，前端生产环境中将js、css、图片等文件进行压缩，通过减少数据传输量减小传输时间，节省服务器网络带宽，提高前端性能。<br>压缩时间、流程、说明</p>
+<img src="https://img-blog.csdnimg.cn/9e12cfe2a5584b7f8c354eb29a5a85f8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBASXNBblNpcg==,size_20,color_FFFFFF,t_70,g_se,x_16" class="">
+<p><b>五、样式表和JS文件的优化</b></p>
+<ol>
+<li><p>头部内联的样式和脚本会阻塞页面的渲染，一般我们会把css样式表文件放到文件的头部使用link引入，这样可以让CSS样式表尽早地完成下载。</p>
+</li>
+<li><p>对应js脚本文件，一般我们把脚本放在尾部并使用异步方式加载，这样可以尽最大限度的减少样式和脚本对页面的阻塞。<br><b>六、减少不必要的Cookie</b><br>Cookie存储在客户端，伴随着HTTP请求在浏览器和服务器之间传递，由于cookie在访问对应域名下的资源时都会通过HTTP请求发送到服务器，从而会影响加载速度，所以尽量减少不必要的Cookie。<br><b>七、脚本优化</b></p>
+</li>
+<li><p> 复杂动画效果，使用绝对定位让其脱离文档流，避免循环DOM元素，用transform:translate 代替 position  left、right…以此来尽量减少回流和重绘。</p>
+</li>
+</ol>
+<p>2．将脚本往后挪，减少对并发下载的影响。</p>
+<p>3．缓存.length的值：每次.length计算使用一个变量保存值。</p>
+<p>4．尽量使用事件委托：不给每个子节点单独设置事件监听器，而是设置在其父节点上，然后利用冒泡原理设置每个子节点，避免批量绑定事件以此来减少内存消耗和DOM操作。</p>
+<p>5．尽量使用id选择器：id选择器选择元素是最快的，具有唯一性，灵活性和优先性的优点。<br><b>八、前端代码结构的优化</b><br>1．设置Viewport：HTML的viewport可加快页面的渲染。</p>
+<p>2．减少DOM结点：DOM结点太多会影响页面的渲染。</p>
+<p>3．尽量使用css3动画：合理使用requestAnimationFrame动画代替setTimeout。</p>
+<p>4．优化高频事件：scroll、touchmove等事件尽量使用函数防抖节流等进行限制。</p>
+<ol start="5">
+<li><p> 不滥用WEB字体：WEB字体需要下载、解析、重绘当前页面，尽量减少使用。</p>
+</li>
+<li><p> 文件命名规则须统一且要有意义，同类型文件归类到相同的文件夹中。</p>
+</li>
+</ol>
+<p><b>九、SEO优化</b></p>
+<ol>
+<li><p> 标题： 标题字数不要太长，一般写核心的关键词和网站主题相关的内容。</p>
+</li>
+<li><p> 描述：描述是整个页面的综合说明，作用和重要性仅次于标题，描述最好能得吸引人一点，带上自己公司的品牌词和电话，并包括目标关键词。</p>
+</li>
+<li><p> 关键词：对关键词进行优化，能够让用户在搜索关键词的时候，能够准确的定位到自己要搜索的内容和网站，能够让网站被更多有需要的人看到。</p>
+</li>
+</ol>
+<p>4.网站代码：网站代码尽量精简，节约百度蜘蛛的时候，这一点针对大型网站特别重要。</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">ChengWei</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2019/03/22/第二十九篇/">http://example.com/2019/03/22/第二十九篇/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/vue/">vue</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2019/04/01/%E7%AC%AC%E4%B8%89%E5%8D%81%E7%AF%87/"><i class="fa fa-chevron-left">  </i><span>js数组对象去重</span></a></div><div class="next-post pull-right"><a href="/2019/03/18/%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AB%E7%AF%87/"><span>el-input 只能输入整数（包括正数、负数、0）或者只能输入整数（包括正数、负数、0）和小数</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://wx3.sinaimg.cn/mw2000/a2f664a9gy1h4uh0xyosrj219i1kwk6d.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2018 - 2022 By ChengWei</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">hitokoto</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/lib/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.1"></script><script src="/js/fancybox.js?version=1.9.1"></script><script src="/js/sidebar.js?version=1.9.1"></script><script src="/js/copy.js?version=1.9.1"></script><script src="/js/fireworks.js?version=1.9.1"></script><script src="/js/transition.js?version=1.9.1"></script><script src="/js/scroll.js?version=1.9.1"></script><script src="/js/head.js?version=1.9.1"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>

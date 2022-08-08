@@ -1,4 +1,17 @@
-http://example.com/2019/03/02/%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%83%E7%AF%87/
+http://example.com/2019/05/20/%E7%AC%AC%E5%9B%9B%E5%8D%81%E7%AF%87/
+http://example.com/2019/05/16/%E7%AC%AC%E4%B8%89%E5%8D%81%E4%B9%9D%E7%AF%87/
+http://example.com/2019/05/13/%E7%AC%AC%E4%B8%89%E5%8D%81%E5%85%AB%E7%AF%87/
+http://example.com/2019/05/08/%E7%AC%AC%E4%B8%89%E5%8D%81%E4%B8%83%E7%AF%87/
+http://example.com/2019/05/08/%E7%AC%AC%E4%B8%89%E5%8D%81%E5%85%AD%E7%AF%87/
+http://example.com/2019/05/03/%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%94%E7%AF%87/
+http://example.com/2019/04/29/%E7%AC%AC%E4%B8%89%E5%8D%81%E5%9B%9B%E7%AF%87/
+http://example.com/2019/04/25/%E7%AC%AC%E4%B8%89%E5%8D%81%E4%B8%89%E7%AF%87/
+http://example.com/2019/04/16/%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%8C%E7%AF%87/
+http://example.com/2019/04/09/%E7%AC%AC%E4%B8%89%E5%8D%81%E4%B8%80%E7%AF%87/
+http://example.com/2019/04/01/%E7%AC%AC%E4%B8%89%E5%8D%81%E7%AF%87/
+http://example.com/2019/03/22/%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B9%9D%E7%AF%87/
+http://example.com/2019/03/18/%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AB%E7%AF%87/
+http://example.com/2019/03/09/%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%83%E7%AF%87/
 http://example.com/2019/03/02/%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AD%E7%AF%87/
 http://example.com/2019/02/19/%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%94%E7%AF%87/
 http://example.com/2019/02/15/%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%9B%9B%E7%AF%87/
@@ -42,6 +55,7 @@ http://example.com/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/
 http://example.com/tags/nginx/
 http://example.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/
 http://example.com/tags/echarts/
+http://example.com/tags/js/
 http://example.com/categories/mysql/
 http://example.com/categories/react/
 http://example.com/categories/vue/
@@ -53,3 +67,4 @@ http://example.com/categories/%E5%85%AC%E4%BC%97%E5%8F%B7/
 http://example.com/categories/nginx/
 http://example.com/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/
 http://example.com/categories/echarts/
+http://example.com/categories/js/
