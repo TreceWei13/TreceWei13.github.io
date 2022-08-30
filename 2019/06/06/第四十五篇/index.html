@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="用媒体查询实现响应式布局"><meta name="keywords" content="css"><meta name="author" content="ChengWei"><meta name="copyright" content="ChengWei"><title>用媒体查询实现响应式布局 | Chengcw'博客</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.1"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://v1.hitokoto.cn/?encode=js&amp;charset=utf-8&amp;select=.footer_custom_text" defer></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  hexoVersion: '5.4.2'
+} </script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Chengcw'博客" type="application/atom+xml">
+</head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://wx2.sinaimg.cn/thumb150/008soxMJly1h0v1m20khej30u00u0td0.jpg"></div><div class="author-info__name text-center">ChengWei</div><div class="author-info__description text-center"></div><div class="follow-button"><a target="_blank" rel="noopener" href="https://github.com/USERNAME">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">150</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">27</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">24</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F6%2F53cca8e7873e6.jpg&amp;refer=http%3A%2F%2Fpic1.win4000.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1664449271&amp;t=4f4642aaba02226ad62910f50b366e4b)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Chengcw'博客</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">首页</a><a class="site-page" href="/archives">文章</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">用媒体查询实现响应式布局</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-06-06</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/css/">css</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>@media空格设备类型 {元素{属性：值;}}</p>
+<p>screen表示电子屏幕<br>print表示打印机屏幕<br>所有设备使用媒体查询可以用@media all</p>
+<p>@media空格and空格（你想要加的条件）{元素{属性：值;}}</p>
+<p>常见的条件有max-width表示小于等于这个宽度的时候做什么<br>min-width表示大于等于这个宽度的时候做什么</p>
+<p>条件是可以叠加的哇，记住and的左右都有空格哦</p>
+<img src="https://img-blog.csdnimg.cn/e86a0df1bf634e55b269cf49273a02d3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2hpaHVvbWlhbw==,size_19,color_FFFFFF,t_70,g_se,x_16" class="">
+<p>设置color颜色时要注意，颜色是可以被body里面的子元素继承的<br>但是如果子元素有自己的颜色，就会使用自己的颜色</p>
+<p>如果写了两条响应式但是条件相反，谁在下面谁算数</p>
+<hr>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<p>meta ：vp 理想、标准视口 content=显示的宽度为设备的宽度，是否对屏幕的尺寸进行缩放，1.0表示不缩放</p>
+<p>在移动端这个语句很重要哦</p>
+<p>使用物理单位px在不同宽度和不同分辨率的手机上会有一定的差异，为了避免我们会使用em或rem做为移动端的单位，但是em相对父元素大小显示，所以还是rem经常做为移动端的单位<br>不同浏览器根元素的默认大小大小不一致，所以我们要手动设置</p>
+<img src="https://img-blog.csdnimg.cn/5e3b2c083e224314827d3c62f00ad1ee.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2hpaHVvbWlhbw==,size_16,color_FFFFFF,t_70,g_se,x_16" class="">
+<p>假如手动设置html的font-size为10px，那么接下来写的1rem就是10px了</p>
+<p>我们做的效果在不同的屏幕尺寸当中有不同样式<br>浏览器有默认最小尺寸就算你设置的比它低显示的还是浏览器最小的大小</p>
+<link rel="stylesheet" href="./1.css"> 后面可以设置media=“screen and （max-width：600px）：当屏幕小于600添加这些样式”
+screen前面可以加only ：仅在电脑屏幕或移动设备下，其他设备屏幕无效
+使用的环境是：不同的屏幕需要显示不同的样式Css需要写很多的情况下可以这么写就可以调用多套样式了
+
+<p>———————————————————————————————————————————</p>
+<p>小练习~</p>
+<p>需求说明 通过 flex 布局，完成导航栏目布局效果 通过 flex 实现垂直居中,具体效果如下：</p>
+<img src="https://img-blog.csdnimg.cn/9531f293a80445e99be6fd4d3cf4d165.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2hpaHVvbWlhbw==,size_18,color_FFFFFF,t_70,g_se,x_16" class="">
+
+<p>页面宽度大于 600px 小于 800px 的时候，容器属性变为justify-content: space-around，显示效果如下：</p>
+<img src="https://img-blog.csdnimg.cn/97f804e9b7c94f778e751fe9d2b311ff.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2hpaHVvbWlhbw==,size_9,color_FFFFFF,t_70,g_se,x_16" class="">
+
+<p>页面宽度宽度小于 600px 的时候自动换行，显示效果如下</p>
+<img src="https://img-blog.csdnimg.cn/97f804e9b7c94f778e751fe9d2b311ff.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2hpaHVvbWlhbw==,size_9,color_FFFFFF,t_70,g_se,x_16" class="">
+
+
+<img src="https://img-blog.csdnimg.cn/f77fb247b4fc47809a8b76841d449b77.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2hpaHVvbWlhbw==,size_20,color_FFFFFF,t_70,g_se,x_16" class="">
+
+
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">ChengWei</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2019/06/06/第四十五篇/">http://example.com/2019/06/06/第四十五篇/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/css/">css</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2019/06/09/%E5%9B%9B%E5%8D%81%E5%85%AD%E7%AF%87/"><i class="fa fa-chevron-left">  </i><span>浅拷贝与深拷贝的区别（详解）</span></a></div><div class="next-post pull-right"><a href="/2019/06/04/%E7%AC%AC%E5%9B%9B%E5%8D%81%E5%9B%9B%E7%AF%87/"><span>文本超出部分显示省略号</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F6%2F53cca8e7873e6.jpg&amp;refer=http%3A%2F%2Fpic1.win4000.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1664449271&amp;t=4f4642aaba02226ad62910f50b366e4b)"><div class="layout" id="footer"><div class="copyright">&copy;2018 - 2022 By ChengWei</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">hitokoto</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/lib/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.1"></script><script src="/js/fancybox.js?version=1.9.1"></script><script src="/js/sidebar.js?version=1.9.1"></script><script src="/js/copy.js?version=1.9.1"></script><script src="/js/fireworks.js?version=1.9.1"></script><script src="/js/transition.js?version=1.9.1"></script><script src="/js/scroll.js?version=1.9.1"></script><script src="/js/head.js?version=1.9.1"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>

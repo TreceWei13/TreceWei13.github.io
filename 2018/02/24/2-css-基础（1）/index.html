@@ -1,0 +1,493 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="css-基础（1）"><meta name="keywords" content="css"><meta name="author" content="ChengWei"><meta name="copyright" content="ChengWei"><title>css-基础（1） | Chengcw'博客</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.1"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://v1.hitokoto.cn/?encode=js&amp;charset=utf-8&amp;select=.footer_custom_text" defer></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  hexoVersion: '5.4.2'
+} </script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Chengcw'博客" type="application/atom+xml">
+</head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://wx2.sinaimg.cn/thumb150/008soxMJly1h0v1m20khej30u00u0td0.jpg"></div><div class="author-info__name text-center">ChengWei</div><div class="author-info__description text-center"></div><div class="follow-button"><a target="_blank" rel="noopener" href="https://github.com/USERNAME">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">150</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">27</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">24</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F6%2F53cca8e7873e6.jpg&amp;refer=http%3A%2F%2Fpic1.win4000.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1664449271&amp;t=4f4642aaba02226ad62910f50b366e4b)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Chengcw'博客</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">首页</a><a class="site-page" href="/archives">文章</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">css-基础（1）</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-02-24</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><hr>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>一、CSS 文字属性</strong></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">语 言</td>
+<td align="left">功 能</td>
+</tr>
+<tr>
+<td align="left">color : #999999;</td>
+<td align="left">文字颜色</td>
+</tr>
+<tr>
+<td align="left">font-family:宋体,sans-serif;</td>
+<td align="left">文字字体</td>
+</tr>
+<tr>
+<td align="left">font-size:9pt;</td>
+<td align="left">文字大小</td>
+</tr>
+<tr>
+<td align="left">font-style:itelic;</td>
+<td align="left">文字斜体</td>
+</tr>
+<tr>
+<td align="left">font-variant:small-caps;</td>
+<td align="left">小字体</td>
+</tr>
+<tr>
+<td align="left">letter-spacing:1pt;</td>
+<td align="left">字间距离</td>
+</tr>
+<tr>
+<td align="left">line-height : 200%;</td>
+<td align="left">设置行高</td>
+</tr>
+<tr>
+<td align="left">font-weight:bold;</td>
+<td align="left">文字粗体</td>
+</tr>
+<tr>
+<td align="left">vertical-align:sub;</td>
+<td align="left">下标字</td>
+</tr>
+<tr>
+<td align="left">vertical-align:super;</td>
+<td align="left">上标字</td>
+</tr>
+<tr>
+<td align="left">text-decoration:line-through;</td>
+<td align="left">加删除线</td>
+</tr>
+<tr>
+<td align="left">text-decoration:overline;</td>
+<td align="left">加顶线</td>
+</tr>
+<tr>
+<td align="left">text-decoration:underline;</td>
+<td align="left">加下画线</td>
+</tr>
+<tr>
+<td align="left">text-decoration:none;</td>
+<td align="left">删除链接下画线</td>
+</tr>
+<tr>
+<td align="left">text-transform:capitalize;</td>
+<td align="left">首字大写</td>
+</tr>
+<tr>
+<td align="left">text-transform:uppercase;</td>
+<td align="left">英文大写</td>
+</tr>
+<tr>
+<td align="left">text-transform:lowercase;</td>
+<td align="left">英文小写</td>
+</tr>
+<tr>
+<td align="left">text-align:right;</td>
+<td align="left">文字右对齐</td>
+</tr>
+<tr>
+<td align="left">text-align:left;</td>
+<td align="left">文字左对齐</td>
+</tr>
+<tr>
+<td align="left">text-align:center;</td>
+<td align="left">文字居中对齐</td>
+</tr>
+<tr>
+<td align="left">text-align:justify;</td>
+<td align="left">文字两端对齐</td>
+</tr>
+<tr>
+<td align="left"><strong>vertical-align属性</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">vertical-align:top;</td>
+<td align="left">垂直向上对齐</td>
+</tr>
+<tr>
+<td align="left">vertical-align:bottom;</td>
+<td align="left">垂直向下对齐</td>
+</tr>
+<tr>
+<td align="left">vertical-align:middle;</td>
+<td align="left">垂直居中对齐</td>
+</tr>
+<tr>
+<td align="left">vertical-align:text-top;</td>
+<td align="left">文字垂直向上对齐</td>
+</tr>
+<tr>
+<td align="left">vertical-align:text-bottom;</td>
+<td align="left">文字垂直向下对齐</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>二、CSS 项目符号</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">list-style-type:none;</td>
+<td align="left">不编号</td>
+</tr>
+<tr>
+<td align="left">list-style-type:decimal;</td>
+<td align="left">阿拉伯数字</td>
+</tr>
+<tr>
+<td align="left">list-style-type:lower-roman;</td>
+<td align="left">小写罗马数字</td>
+</tr>
+<tr>
+<td align="left">list-style-type:upper-roman;</td>
+<td align="left">大写罗马数字</td>
+</tr>
+<tr>
+<td align="left">list-style-type:lower-alpha;</td>
+<td align="left">小写英文字母</td>
+</tr>
+<tr>
+<td align="left">list-style-type:upper-alpha;</td>
+<td align="left">大写英文字母</td>
+</tr>
+<tr>
+<td align="left">list-style-type:disc;</td>
+<td align="left">实心圆形符号</td>
+</tr>
+<tr>
+<td align="left">list-style-type:circle;</td>
+<td align="left">空心圆形符号</td>
+</tr>
+<tr>
+<td align="left">list-style-type:square;</td>
+<td align="left">实心方形符号</td>
+</tr>
+<tr>
+<td align="left">list-style-image:url(/dot.gif)</td>
+<td align="left">图片式符号</td>
+</tr>
+<tr>
+<td align="left">list-style-position:outside;</td>
+<td align="left">凸排</td>
+</tr>
+<tr>
+<td align="left">list-style-position:inside;</td>
+<td align="left">缩进</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>三、CSS 背景样式</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">background-color:#F5E2EC;</td>
+<td align="left">背景颜色</td>
+</tr>
+<tr>
+<td align="left">background:transparent;</td>
+<td align="left">透视背景</td>
+</tr>
+<tr>
+<td align="left">background-image:url(image/bg.gif);</td>
+<td align="left">背景图片</td>
+</tr>
+<tr>
+<td align="left">background-attachment:fixed;</td>
+<td align="left">浮水印固定背景</td>
+</tr>
+<tr>
+<td align="left">background-repeat:repeat;</td>
+<td align="left">重复排列-网页默认</td>
+</tr>
+<tr>
+<td align="left">background-repeat:no-repeat;</td>
+<td align="left">不重复排列</td>
+</tr>
+<tr>
+<td align="left">background-repeat:repeat-x;</td>
+<td align="left">在 X 轴重复排列</td>
+</tr>
+<tr>
+<td align="left">background-repeat:repeat-y;</td>
+<td align="left">在 Y 轴重复排列</td>
+</tr>
+<tr>
+<td align="left">background-position:90% 90%;</td>
+<td align="left">背景图片 X 与 Y 轴的位置</td>
+</tr>
+<tr>
+<td align="left">background-position:top;</td>
+<td align="left">向上对齐</td>
+</tr>
+<tr>
+<td align="left">background-position:buttom;</td>
+<td align="left">向下对齐</td>
+</tr>
+<tr>
+<td align="left">background-position:left;</td>
+<td align="left">向左对齐</td>
+</tr>
+<tr>
+<td align="left">background-position:right;</td>
+<td align="left">向右对齐</td>
+</tr>
+<tr>
+<td align="left">background-position:center;</td>
+<td align="left">居中对齐</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>四、CSS 链接属性</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">a 所有超链接</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">a:link</td>
+<td align="left">超链接文字格式</td>
+</tr>
+<tr>
+<td align="left">a:visited</td>
+<td align="left">浏览过的链接文字格式</td>
+</tr>
+<tr>
+<td align="left">a:active</td>
+<td align="left">按下链接的格式</td>
+</tr>
+<tr>
+<td align="left">a:hover</td>
+<td align="left">鼠标转到链接</td>
+</tr>
+<tr>
+<td align="left">cursor:crosshair</td>
+<td align="left">十字体</td>
+</tr>
+<tr>
+<td align="left">cursor:s-resize</td>
+<td align="left">箭头朝下</td>
+</tr>
+<tr>
+<td align="left">cursor:help</td>
+<td align="left">加一问号</td>
+</tr>
+<tr>
+<td align="left">cursor:w-resize</td>
+<td align="left">箭头朝左</td>
+</tr>
+<tr>
+<td align="left">cursor:n-resize</td>
+<td align="left">箭头朝上</td>
+</tr>
+<tr>
+<td align="left">cursor:ne-resize</td>
+<td align="left">箭头朝右上</td>
+</tr>
+<tr>
+<td align="left">cursor:nw-resize</td>
+<td align="left">箭头朝左上</td>
+</tr>
+<tr>
+<td align="left">cursor:text</td>
+<td align="left">文字 I 型</td>
+</tr>
+<tr>
+<td align="left">cursor:se-resize</td>
+<td align="left">箭头斜右下</td>
+</tr>
+<tr>
+<td align="left">cursor:sw-resize</td>
+<td align="left">箭头斜左下</td>
+</tr>
+<tr>
+<td align="left">cursor:wait</td>
+<td align="left">漏斗</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>五、CSS 边框属性</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">border-top:1px solid #6699cc;</td>
+<td align="left">上框线</td>
+</tr>
+<tr>
+<td align="left">border-bottom:1px solid #6699cc;</td>
+<td align="left">下框线</td>
+</tr>
+<tr>
+<td align="left">border-left:1px solid #6699cc;</td>
+<td align="left">左框线</td>
+</tr>
+<tr>
+<td align="left">border-right:1px solid #6699cc;</td>
+<td align="left">右框线</td>
+</tr>
+<tr>
+<td align="left">solid</td>
+<td align="left">实线框 2+6010</td>
+</tr>
+<tr>
+<td align="left">47dotted</td>
+<td align="left">虚线框</td>
+</tr>
+<tr>
+<td align="left">double</td>
+<td align="left">双线框</td>
+</tr>
+<tr>
+<td align="left">groove</td>
+<td align="left">立体内凸框</td>
+</tr>
+<tr>
+<td align="left">ridge</td>
+<td align="left">立体浮雕框</td>
+</tr>
+<tr>
+<td align="left">inset</td>
+<td align="left">凹框</td>
+</tr>
+<tr>
+<td align="left">outset</td>
+<td align="left">凸框</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>六、CSS 表单</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">``</td>
+<td align="left">文本域</td>
+</tr>
+<tr>
+<td align="left">``</td>
+<td align="left">按钮</td>
+</tr>
+<tr>
+<td align="left">``</td>
+<td align="left">复选框</td>
+</tr>
+<tr>
+<td align="left">``</td>
+<td align="left">单选按钮</td>
+</tr>
+<tr>
+<td align="left"><code>选项1</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">列表菜单</td>
+</tr>
+<tr>
+<td align="left">``</td>
+<td align="left">多行文本域</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>七、CSS 边界样式</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">margin-top:10px;</td>
+<td align="left">上边界</td>
+</tr>
+<tr>
+<td align="left">margin-right:10px;</td>
+<td align="left">右边界值</td>
+</tr>
+<tr>
+<td align="left">margin-bottom:10px;</td>
+<td align="left">下边界值</td>
+</tr>
+<tr>
+<td align="left">margin-left:10px;</td>
+<td align="left">左边界值</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>八、CSS 边框空白</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">padding-top:10px;</td>
+<td align="left">上边框留空白</td>
+</tr>
+<tr>
+<td align="left">padding-right:10px;</td>
+<td align="left">右边框留空白</td>
+</tr>
+<tr>
+<td align="left">padding-bottom:10px;</td>
+<td align="left">下边框留空白</td>
+</tr>
+<tr>
+<td align="left">padding-left:10px;</td>
+<td align="left">左边框留空白</td>
+</tr>
+</tbody></table>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">ChengWei</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2018/02/24/2-css-基础（1）/">http://example.com/2018/02/24/2-css-基础（1）/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/css/">css</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2018/02/25/2-css-%E5%9F%BA%E7%A1%80%EF%BC%882%EF%BC%89/"><i class="fa fa-chevron-left">  </i><span>css-基础（2）</span></a></div><div class="next-post pull-right"><a href="/2018/02/21/2-css-%E6%A0%87%E5%87%86%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E5%92%8CIE%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/"><span>标准盒子模型和IE盒子模型</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F6%2F53cca8e7873e6.jpg&amp;refer=http%3A%2F%2Fpic1.win4000.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1664449271&amp;t=4f4642aaba02226ad62910f50b366e4b)"><div class="layout" id="footer"><div class="copyright">&copy;2018 - 2022 By ChengWei</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">hitokoto</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/lib/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.1"></script><script src="/js/fancybox.js?version=1.9.1"></script><script src="/js/sidebar.js?version=1.9.1"></script><script src="/js/copy.js?version=1.9.1"></script><script src="/js/fireworks.js?version=1.9.1"></script><script src="/js/transition.js?version=1.9.1"></script><script src="/js/scroll.js?version=1.9.1"></script><script src="/js/head.js?version=1.9.1"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>

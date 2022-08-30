@@ -1,0 +1,172 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="移动端适配"><meta name="keywords" content="html,移动端"><meta name="author" content="ChengWei"><meta name="copyright" content="ChengWei"><title>移动端适配 | Chengcw'博客</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.1"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://v1.hitokoto.cn/?encode=js&amp;charset=utf-8&amp;select=.footer_custom_text" defer></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  hexoVersion: '5.4.2'
+} </script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Chengcw'博客" type="application/atom+xml">
+</head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%81%9A%E9%80%82%E9%85%8D"><span class="toc-number">1.</span> <span class="toc-text">一、为什么要做适配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%80%82%E9%85%8D%E6%96%B9%E6%A1%88"><span class="toc-number">2.</span> <span class="toc-text">二、适配方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%8D%95%E4%BD%8D"><span class="toc-number">3.</span> <span class="toc-text">三、单位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E7%99%BE%E5%88%86%E6%AF%94%E9%80%82%E9%85%8D-%E5%B8%B8%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">四、百分比适配(常用)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81Rem%E9%80%82%E9%85%8D-%E5%B8%B8%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text">五、Rem适配(常用)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E7%BC%A9%E6%94%BE%E6%AF%94%E9%80%82%E9%85%8D"><span class="toc-number">6.</span> <span class="toc-text">六、缩放比适配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%83%8F%E7%B4%A0%E6%AF%94%E9%80%82%E9%85%8D"><span class="toc-number">7.</span> <span class="toc-text">七、像素比适配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E5%B0%8F%E7%BB%93"><span class="toc-number">8.</span> <span class="toc-text">八、小结</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://wx2.sinaimg.cn/thumb150/008soxMJly1h0v1m20khej30u00u0td0.jpg"></div><div class="author-info__name text-center">ChengWei</div><div class="author-info__description text-center"></div><div class="follow-button"><a target="_blank" rel="noopener" href="https://github.com/USERNAME">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">150</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">27</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">24</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F6%2F53cca8e7873e6.jpg&amp;refer=http%3A%2F%2Fpic1.win4000.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1664449271&amp;t=4f4642aaba02226ad62910f50b366e4b)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Chengcw'博客</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">首页</a><a class="site-page" href="/archives">文章</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">移动端适配</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-02-05</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">移动端</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h2 id="一、为什么要做适配"><a href="#一、为什么要做适配" class="headerlink" title="一、为什么要做适配"></a>一、为什么要做适配</h2><ul>
+<li>为了适应各种移动端设备，完美呈现应有的布局效果</li>
+<li>各个移动端设备，分辨率大小不一致，网页想铺满整个屏幕，并在各种分辨下等比缩放</li>
+</ul>
+<h2 id="二、适配方案"><a href="#二、适配方案" class="headerlink" title="二、适配方案"></a>二、适配方案</h2><ul>
+<li>固定高度，宽度百分比适配-布局非常均匀，适合百分比布局</li>
+<li>固定宽度，改变缩放比例适配-什么情况都可以</li>
+<li><code>Rem</code>适配</li>
+<li>像素比适配</li>
+</ul>
+<h2 id="三、单位"><a href="#三、单位" class="headerlink" title="三、单位"></a>三、单位</h2><ul>
+<li><code>em</code>根据元素自身的字体大小计算,元素自身 <code>16px</code> <code>1em=16px</code></li>
+<li><code>Rem</code> <code>R -&gt; root</code> 根节点( <code>html</code> ) 根据<code>html</code>的字体大小计算其他元素尺寸</li>
+</ul>
+<h2 id="四、百分比适配-常用"><a href="#四、百分比适配-常用" class="headerlink" title="四、百分比适配(常用)"></a>四、百分比适配(常用)</h2><blockquote>
+<p>固定高度，宽度百分比适配</p>
+</blockquote>
+<ul>
+<li>根据设置的大小去设置高度，单位可以用<code>px</code> 百分比 <code>auto</code></li>
+<li>常用<code>Flex</code>布局</li>
+<li>百分比宽度</li>
+</ul>
+<blockquote>
+<p>以<code>640</code>设计稿为例，在外层容器上设置最大以及最小的宽</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#wrapper &#123;</span><br><span class="line">    max-width: 640px; /*设置设计稿的宽度*/</span><br><span class="line">    min-width: 300px;</span><br><span class="line">    margin: 0 auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>后面的区块布局都用百分比，具体元素大小用<code>px</code>计算</p>
+</blockquote>
+<ul>
+<li>也就是宽度用百分比，高度用<code>px</code></li>
+<li>高度以及图片不要定死，让它自动撑开</li>
+</ul>
+<h2 id="五、Rem适配-常用"><a href="#五、Rem适配-常用" class="headerlink" title="五、Rem适配(常用)"></a>五、Rem适配(常用)</h2><ul>
+<li>根据屏幕的分辨率动态设置<code>html</code>的文字大小，达到等比缩放的功能</li>
+<li>保证<code>html</code>最终算出来的字体大小，不能小于<code>12px</code></li>
+<li>在不同的移动端显示不同的元素比例效果</li>
+<li>如果<code>html</code>的<code>font-size:20px</code>的时候，那么此时的<code>1rem = 20px</code></li>
+<li>把设计图的宽度分成多少分之一，根据实际情况</li>
+<li><code>rem</code>做盒子的宽度，<code>viewport</code>缩放</li>
+</ul>
+<blockquote>
+<p><code>head</code>加入常见的<code>meta</code>属性</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&gt;</span><br><span class="line">&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;</span><br><span class="line">&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot;&gt;</span><br><span class="line">&lt;!--这个是关键--&gt;</span><br><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0，minimum-scale=1.0&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>把这段代码加入<code>head</code>中的<code>script</code>预先加载</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">// rem适配用这段代码动态计算html的font-size大小</span><br><span class="line">(function(win) &#123;</span><br><span class="line">    var docEl = win.document.documentElement;</span><br><span class="line">    var timer = &#x27;&#x27;;</span><br><span class="line"></span><br><span class="line">    function changeRem() &#123;</span><br><span class="line">        var width = docEl.getBoundingClientRect().width;</span><br><span class="line">        if (width &gt; 750) &#123; // 750是设计稿大小</span><br><span class="line">            width = 750;</span><br><span class="line">        &#125;</span><br><span class="line">        var fontS = width / 10; // 把设备宽度十等分 1rem=10px</span><br><span class="line">        docEl.style.fontSize = fontS + &quot;px&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    win.addEventListener(&quot;resize&quot;, function() &#123;</span><br><span class="line">        clearTimeout(timer);</span><br><span class="line">        timer = setTimeout(changeRem, 30);</span><br><span class="line">    &#125;, false);</span><br><span class="line">    win.addEventListener(&quot;pageshow&quot;, function(e) &#123;</span><br><span class="line">        if (e.persisted) &#123; //清除缓存</span><br><span class="line">            clearTimeout(timer);</span><br><span class="line">            timer = setTimeout(changeRem, 30);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, false);</span><br><span class="line">    changeRem();</span><br><span class="line">&#125;)(window)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>或者使用淘宝提供的库 <a target="_blank" rel="noopener" href="https://github.com/amfe/lib-flexible">https://github.com/amfe/lib-flexible</a></li>
+</ul>
+<p><strong>布局细节</strong></p>
+<ul>
+<li>结构用<code>section</code>区块划分更语义化</li>
+<li>然后在<code>body</code>设置宽度</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">    width: 10rem;</span><br><span class="line">    margin: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>后面的区块都以百分比布局</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;wrapper&quot;&gt;</span><br><span class="line">   &lt;header&gt;&lt;header&gt;</span><br><span class="line">   &lt;section&gt;&lt;section&gt;</span><br><span class="line">   &lt;section&gt;&lt;section&gt;</span><br><span class="line">   &lt;section&gt;&lt;section&gt;</span><br><span class="line">   &lt;section&gt;&lt;section&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">section,</span><br><span class="line">header &#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>把视觉稿中的 px 转换成 rem</strong></p>
+<blockquote>
+<p>首先，目前日常工作当中，视觉设计师给到前端开发人员手中的视觉稿尺寸一般是基于 <code>640px</code> 、 <code>750px</code> 以及 <code>1125px</code> 宽度为准。甚至为什么？大家应该懂的（考虑<code>Retina</code>屏）</p>
+</blockquote>
+<blockquote>
+<p>假定设计稿的大小为<code>750</code>，那么我们则将整个图分成<code>10</code>等份来看。`` 对应的 <code>font-size</code>为<code>75px</code></p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">html&#123;</span><br><span class="line">	font-size: 75px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这样一来，对于视觉稿上的元素尺寸换算，只需要原始的 <code>px</code>值 除以 <code>rem</code>基准值 即可</li>
+</ul>
+<blockquote>
+<p>那么，我们现在就可以比对设计稿，比如设计稿中，有一个<code>div</code>元素，宽度，高度都为<code>20px</code>,那么我们这样写即可（可以用 <code>markman</code>标准设计稿的元素大小）</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">	height: 0.27rem; /*20/75*/</span><br><span class="line">	width: 0.27rem;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>动态计算的<code>rem</code>最后会帮我们动态计算元素在不同屏幕下的宽高</li>
+<li>对于设计稿上的每个元素的尺寸在设计稿大小已知的时候，我们需要测量出，然后在用测量的宽高除以设计稿<code>750</code>的十分之一也就是<code>75</code>,得到我们想要的<code>rem</code>。而<code>rem</code>是根据屏幕动态变化的，也就达到了适配的效果。也就是同一套设计稿运用在不同的设备上。</li>
+</ul>
+<blockquote>
+<p>比如当我们切换到<code>320</code>设备大小的时候，这时候<code>1rem=32px;</code> <code>div</code>的像素实际是<code>0.27*32=8.64px``0.27</code>是我们在已知设计稿是<code>750</code>的情况下计算出来的，<code>rem</code>用来动态计算而已</p>
+</blockquote>
+<ul>
+<li>对于<code>margin</code> <code>padding</code> <code>line-height</code> <code>width</code> <code>height</code>使用<code>rem</code>计算</li>
+</ul>
+<p><strong>如何快速计算</strong></p>
+<blockquote>
+<p>在实际生产当中，如果每一次计算 <code>px</code> 转换 <code>rem</code> ，或许会觉得非常麻烦</p>
+</blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/flashlizi/cssrem"><code>CSSREM</code></a> 是一个<code>CSS</code>的 <code>px</code> 值转 <code>rem</code> 值的<code>Sublime Text3</code>自动完成插件</li>
+<li>插件效果</li>
+</ul>
+<p><img src="https://github.com/poetries/cssrem/raw/master/cssrem.gif" alt="img"></p>
+<blockquote>
+<p>插件使用方法</p>
+</blockquote>
+<ul>
+<li><p>安装</p>
+<ul>
+<li>下载本项目，比如：git clone <a target="_blank" rel="noopener" href="https://github.com/flashlizi/cssrem">https://github.com/flashlizi/cssrem</a></li>
+<li>进入<code>packages</code>目录：<code>Sublime Text</code> -&gt; <code>Preferences</code> -&gt; <code>Browse Packages</code>…</li>
+<li>复制下载的<code>cssrem</code>目录到刚才的packges目录里。</li>
+<li>重启<code>Sublime Text</code></li>
+</ul>
+</li>
+<li><p>配置参数</p>
+<ul>
+<li><p>参数配置文件：<code>Sublime Text -&gt; Preferences -&gt; Package Settings -&gt; cssrem</code></p>
+</li>
+<li><p><code>px_to_rem</code> - <code>px</code>转<code>rem</code>的单位比例，默认为<code>40</code>【根据设计稿来设置，如设计稿<code>750</code>，我们取十分之一即<code>75</code>】。</p>
+</li>
+<li><p><code>max_rem_fraction_length</code> - <code>px</code>转<code>rem</code>的小数部分的最大长度。默认为<code>6</code>。</p>
+</li>
+<li><p><code>available_file_types</code> - 启用此插件的文件类型。默认为：[“<code>.css</code>“, “<code>.less</code>“, “<code>.sass</code>“]。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>文字适配的解决方案</strong></p>
+<ul>
+<li>对于一些标题性的文字，我们依然可以用<code>rem</code>。让他随着屏幕来进行缩放，因为标题性文字一般较大，而较大的文字，点阵对其影响就越小。这样，即使出现奇怪的尺寸，也能够让字体得到很好的渲染。</li>
+<li>对于一些正文内容的文字（即站在使用者的角度，你不希望他进行缩放的文字）。我们采用<code>px</code>来进行处理</li>
+</ul>
+<h2 id="六、缩放比适配"><a href="#六、缩放比适配" class="headerlink" title="六、缩放比适配"></a>六、缩放比适配</h2><blockquote>
+<p>固定宽度，改变缩放比例适配</p>
+</blockquote>
+<ul>
+<li>设计图的宽度就是网页显示的宽度</li>
+<li>改变视口的缩放比例</li>
+<li>页面宽度固定死</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 缩放比例适配方案--用这个代码 </span><br><span class="line">var width = window.screen.width,</span><br><span class="line">    fixedW = 320, //设计稿宽度的一半</span><br><span class="line">    scale = width / fixedW, // 缩放比例</span><br><span class="line">    meta = document.createElement(&#x27;meta&#x27;),</span><br><span class="line">    metaAttr = &#123;</span><br><span class="line">        name : &#x27;viewport&#x27;,</span><br><span class="line">        content : &#x27;width=&#x27;+fixedW+&#x27;, initial-scale=&#x27;+scale+&#x27;, maximum-scale=&#x27;+scale+&#x27;, user-scalable=0&#x27;</span><br><span class="line">    &#125;;</span><br><span class="line">    for (var key in metaAttr) &#123;</span><br><span class="line">        meta[key] = metaAttr[key];</span><br><span class="line">    &#125;</span><br><span class="line">    document.head.appendChild(meta);</span><br></pre></td></tr></table></figure>
+
+<h2 id="七、像素比适配"><a href="#七、像素比适配" class="headerlink" title="七、像素比适配"></a>七、像素比适配</h2><ul>
+<li><code>window.devicePixelRatio</code></li>
+<li>物理像素是手机屏幕分辨率</li>
+<li>独立像素 指<code>css</code>像素 屏幕宽度</li>
+<li>像素比 = 物理像素 / <code>css宽度</code></li>
+<li>获取设备的像素比 <code>window.devicePixelRatio</code></li>
+</ul>
+<h2 id="八、小结"><a href="#八、小结" class="headerlink" title="八、小结"></a>八、小结</h2><blockquote>
+<p>关于移动端布局方案有很多，<code>rem</code>和百分比运用最多的</p>
+</blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://ymblog.net/2015/07/01/%E7%A7%BB%E5%8A%A8%E5%89%8D%E7%AB%AFmeta%E6%A0%87%E7%AD%BE%E8%BD%AC/">http://ymblog.net/2015/07/01/移动前端meta标签转/</a>)</li>
+</ul>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">ChengWei</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2018/02/05/1-移动端布局适配/">http://example.com/2018/02/05/1-移动端布局适配/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/html/">html</a><a class="post-meta__tags" href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">移动端</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2018/02/07/1-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/"><i class="fa fa-chevron-left">  </i><span>移动端像素比调试</span></a></div><div class="next-post pull-right"><a href="/2018/02/02/1-flex/"><span>flex布局</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F6%2F53cca8e7873e6.jpg&amp;refer=http%3A%2F%2Fpic1.win4000.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1664449271&amp;t=4f4642aaba02226ad62910f50b366e4b)"><div class="layout" id="footer"><div class="copyright">&copy;2018 - 2022 By ChengWei</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">hitokoto</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/lib/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.1"></script><script src="/js/fancybox.js?version=1.9.1"></script><script src="/js/sidebar.js?version=1.9.1"></script><script src="/js/copy.js?version=1.9.1"></script><script src="/js/fireworks.js?version=1.9.1"></script><script src="/js/transition.js?version=1.9.1"></script><script src="/js/scroll.js?version=1.9.1"></script><script src="/js/head.js?version=1.9.1"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>

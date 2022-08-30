@@ -1,0 +1,1588 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content=""><meta name="keywords" content=""><meta name="author" content="ChengWei"><meta name="copyright" content="ChengWei"><title>Chengcw'博客</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.1"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://v1.hitokoto.cn/?encode=js&amp;charset=utf-8&amp;select=.footer_custom_text" defer></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  hexoVersion: '5.4.2'
+} </script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Chengcw'博客" type="application/atom+xml">
+</head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="author-info"><div class="author-info__avatar text-center"><img src="https://wx2.sinaimg.cn/thumb150/008soxMJly1h0v1m20khej30u00u0td0.jpg"></div><div class="author-info__name text-center">ChengWei</div><div class="author-info__description text-center"></div><div class="follow-button"><a target="_blank" rel="noopener" href="https://github.com/USERNAME">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">150</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">27</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">24</span></a></div></div></div><nav id="nav" style="background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F6%2F53cca8e7873e6.jpg&amp;refer=http%3A%2F%2Fpic1.win4000.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1664449271&amp;t=4f4642aaba02226ad62910f50b366e4b)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Chengcw'博客</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">首页</a><a class="site-page" href="/archives">文章</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a></span><span class="pull-right"></span></div><div id="site-info"><div id="site-title">Chengcw'博客</div><div id="site-sub-title"></div><div id="site-social-icons"><a class="social-icon" href="https://github.com/Molunerfinn" target="_blank" rel="noreferrer noopener nofollow"><i class="fa-github fa"></i></a><a class="social-icon" href="http://weibo.com/mybluedreams" target="_blank" rel="noreferrer noopener nofollow"><i class="fa-weibo fa"></i></a><a class="social-icon" href="https://Molunerfinn/atom.xml" target="_blank" rel="noreferrer noopener nofollow"><i class="fa-rss fa"></i></a></div></div></nav><div id="content-outer"><div class="layout" id="content-inner"><div class="recent-post-item article-container"><a class="article-title" href="/2018/02/21/2-css-%E6%A0%87%E5%87%86%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E5%92%8CIE%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">标准盒子模型和IE盒子模型</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-02-21</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/css/">css</a></span><div class="content"><h3 id="标准准盒子模型"><a href="#标准准盒子模型" class="headerlink" title="标准准盒子模型"></a>标准准盒子模型</h3><ul>
+<li>盒子模型是css中一个重要的概念，理解了盒子模型才能更好的排版。其实盒子模型有两种，分别是 ie 盒子模型和标准 w3c 盒子模型。他们对盒子模型的解释各不相同，先来看看我们熟知的标准盒子模型</li>
+</ul>
+<p><img src="http://images.cnblogs.com/cnblogs_com/cchyao/%E6%A0%87%E5%87%86W3C%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E5%92%8CIE%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8BCSS%E5%B8%83%E5%B1%80%E7%BB%8F%E5%85%B8%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/1.JPG" alt="img"></p>
+<ul>
+<li>从上图可以看到标准 <code>w3c</code> 盒子模型的范围包括 <code>margin</code>、<code>border</code>、<code>padding</code>、<code>content</code>，并且 <code>content</code>部分不包含其他部分</li>
+</ul>
+<hr>
+<h3 id="IE盒子模型"><a href="#IE盒子模型" class="headerlink" title="IE盒子模型"></a>IE盒子模型</h3><p><img src="http://images.cnblogs.com/cnblogs_com/cchyao/%E6%A0%87%E5%87%86W3C%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E5%92%8CIE%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8BCSS%E5%B8%83%E5%B1%80%E7%BB%8F%E5%85%B8%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/2.JPG" alt="img"></p>
+<ul>
+<li>从上图可以看到 <code>ie</code>盒子模型的范围也包括 <code>margin</code>、<code>border</code>、<code>padding</code>、<code>content</code></li>
+<li>和标准 <code>w3c</code> 盒子模型不同的是：<code>ie</code> 盒子模型的 <code>content</code> 部分包含了 <code>border</code>和 <code>padding</code></li>
+<li><code>IE</code>盒子模型<code>width</code> = <code>padding</code>+<code>border</code>+<code>内容</code></li>
+<li>标准盒子模型 = 内容的宽度（不包含<code>border</code>+<code>padding</code>）</li>
+<li>例：</li>
+<li>一个盒子的 <code>margin</code>为 20px，<code>border</code> 为 1px，<code>padding</code>为 10px，<code>content</code> 的宽为 200px、高为 50px，假如用标准 <code>w3c</code> 盒子模型解释，那么这个盒子需要占据的位置为：宽 <code>20*2+1*2+10*2+200=262px</code>、高 <code>20*2+1*2*10*2+50=112px</code>，盒子的实际大小为：宽 <code>1*2+10*2+200=222px</code>、高 <code>1*2+10*2+50=72px</code>；假如用ie 盒子模型，那么这个盒子需要占据的位置为：宽 <code>20*2+200=240px</code>、高 <code>20*2+50=70px</code>，盒子的实际大小为：宽 <code>200px</code>、高 <code>50px</code></li>
+<li>那应该选择哪中盒子模型呢？当然是“标准 <code>w3c</code> 盒子模型”了。怎么样才算是选择了“标准 <code>w3c</code>盒子模型”呢？很简单，就是在网页的顶部加上 <code>doctype</code> 声明。</li>
+<li>假如不加<code>doctype</code> 声明，那么各个浏览器会根据自己的行为去理解网页，即 <code>ie</code>浏览器会采用 <code>ie</code> 盒子模型去解释你的盒子，而 <code>ff</code>会采用标准 w3c 盒子模型解释你的盒子，所以网页在不同的浏览器中就显示的不一样了。</li>
+<li>反之，假如加上了 doctype 声明，那么所有浏览器都会采用标准 <code>w3c</code>盒子模型去解释你的盒子，网页就能在各个浏览器中显示一致了。</li>
+</ul>
+<hr>
+<ul>
+<li>再用 jquery 做的例子来证实一下</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;title&gt;你用的盒子模型是？&lt;/title&gt;</span><br><span class="line">&lt;script language=&quot;javascript&quot; src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script language=&quot;javascript&quot;&gt;</span><br><span class="line">var sbox = $.boxmodel ? &quot;标准w3c&quot;:&quot;ie&quot;;</span><br><span class="line">document.write(&quot;您的页面目前支持：&quot;+sbox+&quot;盒子模型&quot;);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>　上面的代码没有加上 <code>doctype</code> 声明，在 <code>ie</code> 浏览器中显示 <code>ie</code>盒子模型，在 ff 浏览器中显示“标准<code>w3c</code> 盒子模型”。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html public &quot;-//w3c//dtd xhtml 1.0 transitional//en&quot; &quot;http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd&quot;&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;title&gt;你用的盒子模型是标准w3c盒子模型&lt;/title&gt;</span><br><span class="line">&lt;script language=&quot;javascript&quot; src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script language=&quot;javascript&quot;&gt;</span><br><span class="line">var sbox = $.boxmodel ? &quot;标准w3c&quot;:&quot;ie&quot;;</span><br><span class="line">document.write(&quot;您的页面目前支持：&quot;+sbox+&quot;盒子模型&quot;);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>　代码2 与代码1 唯一的不同的就是顶部加了 <code>doctype</code>声明。在所有浏览器中都显示“标准 <code>w3c</code>盒子模型”</li>
+<li>所以为了让网页能兼容各个浏览器，让我们用标准 <code>w3c</code> 盒子模型</li>
+</ul>
+</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2018/02/20/2-css%20BFC/">css-BFC</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-02-20</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/css/">css</a></span><div class="content"><h3 id="BFC-是什么？"><a href="#BFC-是什么？" class="headerlink" title="BFC 是什么？"></a>BFC 是什么？</h3><ul>
+<li><code>BFC</code> (<code>Block Formatting Contexts</code>) 即块级格式化上下文，从样式上看，它与普通的容器没有什么区别，但是从功能上，<code>BFC</code> 可以看作是隔离了的独立容器，容器里面的元素不会在布局上影响到外面的元素，并且 <code>BFC</code>具有普通容器没有的一些特性，例如可以包含浮动元素，使到它可以包含浮动元素，从而防止出现高度塌陷的问题</li>
+</ul>
+<hr>
+<h3 id="如何触发-BFC"><a href="#如何触发-BFC" class="headerlink" title="如何触发 BFC"></a>如何触发 BFC</h3><ul>
+<li><p>触发 BFC 的条件</p>
+<ul>
+<li><p>浮动元素，<code>float</code> 除 <code>none</code> 以外的值</p>
+</li>
+<li><p>绝对定位元素，<code>position</code>（<code>absolute</code>，<code>fixed</code>）</p>
+</li>
+<li><p><code>display</code> 为以下其中之一的值 <code>inline-blocks</code>，<code>table-cells</code>，<code>table-captions</code></p>
+</li>
+<li><p><code>overflow</code> 除了 <code>visible</code> 以外的值（<code>hidden</code>，<code>auto</code>，<code>scroll</code>）</p>
+</li>
+<li><p>在CSS3中，BFC叫做Flow Root，并增加了一些触发条件：</p>
+<ul>
+<li><code>display</code> 的 <code>table-caption</code> 值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>position</code> 的 <code>fixed</code> 值，其实 <code>fixed</code> 是 <code>absolute</code> 的一个子类，因此在 <code>CSS2.1</code> 中使用这个值也会触发 <code>BFC</code> ，只是在<code>CSS3</code> 中更加明确了这一点</p>
+</li>
+</ul>
+<hr>
+<h3 id="BFC布局规则"><a href="#BFC布局规则" class="headerlink" title="BFC布局规则"></a>BFC布局规则</h3><ul>
+<li>内部的<code>Box</code>会在垂直方向，一个接一个地放置。</li>
+<li><code>Box</code>垂直方向的距离由<code>margin</code>决定。属于同一个<code>BFC</code>的两个相邻<code>Box</code>的<code>margin</code>会发生重叠</li>
+<li>每个元素的<code>margin box</code>的左边， 与包含块<code>border box</code>的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如 此。</li>
+<li><code>BFC</code>的区域不会与<code>float box</code>重叠。</li>
+<li><code>BFC</code>就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。</li>
+<li>计算<code>BFC</code>的高度时，浮动元素也参与计算</li>
+</ul>
+<hr>
+<h3 id="BFC的作用及原理"><a href="#BFC的作用及原理" class="headerlink" title="BFC的作用及原理"></a>BFC的作用及原理</h3><ul>
+<li><strong>自适应两栏布局</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">       width: 300px;</span><br><span class="line">       position: relative;</span><br><span class="line">   &#125;</span><br><span class="line">   .aside &#123;</span><br><span class="line">       width: 100px;</span><br><span class="line">       height: 150px;</span><br><span class="line">       float: left;</span><br><span class="line">       background: #f66;</span><br><span class="line">   &#125;</span><br><span class="line">   .main &#123;</span><br><span class="line">       height: 200px;</span><br><span class="line">       background: #fcc;</span><br><span class="line">   &#125;</span><br><span class="line"> &lt;body&gt;</span><br><span class="line">       &lt;div class=&quot;aside&quot;&gt;&lt;/div&gt;</span><br><span class="line">       &lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://p1.qhimg.com/d/inn/4055c62a/4dca44a927d4c1ffc30e3ae5f53a0b79.png" alt="img"></p>
+<ul>
+<li>根据BFC布局规则第3条：<ul>
+<li>每个元素的<code>margin box</code>的左边， 与包含块<code>border box</code>的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。</li>
+</ul>
+</li>
+<li>因此，虽然存在浮动的元素<code>aslide</code>，但<code>main</code>的左边依然会与包含块的左边相接触</li>
+<li>根据<code>BFC</code>布局规则第四条：<ul>
+<li><code>BFC</code>的区域不会与<code>float box</code>重叠</li>
+</ul>
+</li>
+<li>我们可以通过通过触发<code>main</code>生成<code>BFC</code>， 来实现自适应两栏布局</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.main &#123;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>当触发<code>main</code>生成<code>BFC</code>后，这个新的<code>BFC</code>不会与浮动的<code>aside</code>重叠。因此会根据包含块的宽度，和<code>aside</code>的宽度，自动变窄。效果如下：</li>
+</ul>
+<p><img src="http://p6.qhimg.com/t01077886a9706cb26b.png" alt="img"></p>
+<ul>
+<li><strong>清除内部浮动</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">.par &#123;</span><br><span class="line">    border: 5px solid #fcc;</span><br><span class="line">    width: 300px;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">.child &#123;</span><br><span class="line">    border: 5px solid #f66;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;par&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://p1.qhimg.com/t016035b58195e7909a.png" alt="img"></p>
+<ul>
+<li><p>根据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BFC</span><br></pre></td></tr></table></figure>
+
+<p>布局规则第六条：</p>
+<ul>
+<li>计算<code>BFC</code>的高度时，浮动元素也参与计算</li>
+</ul>
+</li>
+<li><p>为达到清除内部浮动，我们可以触发<code>par</code>生成<code>BFC</code>，那么<code>par</code>在计算高度时，<code>par</code>内部的浮动元素<code>child</code>也会参与计算</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.par &#123;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://p2.qhimg.com/t016bbbe5236ef1ffd5.png" alt="img"></p>
+<ul>
+<li><strong>防止垂直 margin 重叠</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">p &#123;</span><br><span class="line">    color: #f55;</span><br><span class="line">    background: #fcc;</span><br><span class="line">    width: 200px;</span><br><span class="line">    line-height: 100px;</span><br><span class="line">    text-align: center;</span><br><span class="line">    margin: 100px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;p&gt;Haha&lt;/p&gt;</span><br><span class="line">&lt;p&gt;Hehe&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://p5.qhimg.com/t01b47b8b7d153c07cc.png" alt="img"></p>
+<ul>
+<li>两个<code>p</code>之间的距离为<code>100px</code>，发送了<code>margin</code>重叠</li>
+<li>根据BFC布局规则第二条：<ul>
+<li><code>Box</code>垂直方向的距离由<code>margin</code>决定。属于同一个<code>BFC</code>的两个相邻Box的<code>margin</code>会发生重叠</li>
+</ul>
+</li>
+<li>我们可以在<code>p</code>外面包裹一层容器，并触发该容器生成一个<code>BFC</code>。那么两个<code>P</code>便不属于同一个<code>BFC</code>，就不会发生<code>margin</code>重叠了</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.wrap &#123;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line">p &#123;</span><br><span class="line">    color: #f55;</span><br><span class="line">    background: #fcc;</span><br><span class="line">    width: 200px;</span><br><span class="line">    line-height: 100px;</span><br><span class="line">    text-align: center;</span><br><span class="line">    margin: 100px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;p&gt;Haha&lt;/p&gt;</span><br><span class="line">&lt;div class=&quot;wrap&quot;&gt;</span><br><span class="line">    &lt;p&gt;Hehe&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://p3.qhimg.com/t0118d1d2badbb00521.png" alt="img"></p>
+<hr>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li><p>其实以上的几个例子都体现了</p>
+<p>布局规则第五条</p>
+<ul>
+<li><code>BFC</code>就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此</li>
+</ul>
+</li>
+<li><p>因为<code>BFC</code>内部的元素和外部的元素绝对不会互相影响，因此， 当<code>BFC</code>外部存在浮动时，它不应该影响<code>BFC</code>内部<code>Box</code>的布局，<code>BFC</code>会通过变窄，而不与浮动有重叠。同样的，当<code>BFC</code>内部有浮动时，为了不影响外部元素的布局，<code>BFC</code>计算高度时会包括浮动的高度。避免<code>margin</code>重叠也是这样的一个道理</p>
+</li>
+</ul>
+</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2018/02/07/1-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/">移动端像素比调试</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-02-07</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">移动端</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/html/">html</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">移动端</a></span><div class="content"><ul>
+<li>物理像素:移动端设备的分辨率</li>
+<li>独立像素:css的像素 320 375</li>
+<li>像素比 = 物理像素/独立像素</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>width=device-width</code> 设备宽度 <code>640px</code>(低版本的安卓手机不支持数字) 这个属性在不支持<code>IE</code></li>
+<li><code>initial-scale=1.0</code>(初始缩放比),能够起到和<code>width=device-width</code>相同的效果(把理想的视窗设置为设备的宽度) 两个配合使用就能够很好的解决移动端各设备的适配问题</li>
+<li><code>maximum-scale=1.0</code>最大缩放比例</li>
+<li><code>user-scalable=0</code>禁止缩放</li>
+<li><code>minimum-scale=1.0</code> 最小缩放比例</li>
+</ul>
+<h3 id="移动端布局方法"><a href="#移动端布局方法" class="headerlink" title="移动端布局方法"></a>移动端布局方法</h3><hr>
+<ul>
+<li>1、流式布局 与设备等宽 做自适应 100%或者具体的像素值</li>
+<li>2、<code>rem</code>做盒子的宽度，viewport缩放</li>
+<li>3、固定宽度 <code>viewport</code>缩放<code>content=&quot;width=640, initial-scale=0.5, maximum-scale=0.5, user-scalable=0&quot;</code>（用的比较少）</li>
+<li>4、<code>vw/vh</code> 相对于viewport理想视窗(设备)的比例(兼容性不好)<br><code>1vw = 10%</code>设备宽 <code>10vw</code></li>
+</ul>
+<h3 id="meta标签属性设置"><a href="#meta标签属性设置" class="headerlink" title="meta标签属性设置"></a>meta标签属性设置</h3><hr>
+<meta http-equiv="X-UA-Compatible" content="IE=edge chrome=1">
+
+<ul>
+<li>IE8<code>浏览器的显示方式:</code>IE=edge<code>以</code>IE`最高版本显示</li>
+<li>chrome=1 以谷歌浏览器模式渲染(GCF(Google Chrome Frame))</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;referrer&quot; content=&quot;never&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>referrer 告诉浏览器链接来源于哪里(计算网页上链接的访问量)</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no,email=no,adress=no&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>格式检测:（数字、邮箱、地址） no不识别为电话号码、邮箱、地址</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除默认的苹果工具栏、菜单栏(全屏显示)</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;apple-touch-fullscreen&quot; =&quot;yes&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>全屏显示</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>设置app应用下状态条的颜色</li>
+<li>默认值default (白色) black（黑色）</li>
+<li><code>black-translucent</code>（灰色半透明）若果设置为这个值会占据页面的<code>px</code>位置浮在页面上方<code>20px</code>高度 <code>iphone4</code>是<code>40px</code></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>360</code>模式固定为极速模式</li>
+</ul>
+<h3 id="常见的meta属性"><a href="#常见的meta属性" class="headerlink" title="常见的meta属性"></a>常见的meta属性</h3><hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&gt;</span><br><span class="line">&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;</span><br><span class="line">&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot;&gt;</span><br><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0，minimum-scale=1.0&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="link-扩展"><a href="#link-扩展" class="headerlink" title="link 扩展"></a>link 扩展</h3><hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;dns-prefetch&quot; href=&quot;xxx.com&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>预解析技术，当浏览网页时，浏览器会在加载页面的时对页面中的域名进行解析缓存，当我们点击这些网页的链接时就不需要再进行DNS的解析，减少用户的等待时间，提高用户的体验度</p>
+</blockquote>
+<ul>
+<li><code>rem</code> 根目录 <code>html</code> 的<code>font-size</code>尺寸默认为<code>16px</code> <code>1rem = 16px;</code></li>
+<li><code>1rem = html</code>的<code>font-size</code>的尺寸大小</li>
+</ul>
+</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2018/02/05/1-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80%E9%80%82%E9%85%8D/">移动端适配</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-02-05</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">移动端</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/html/">html</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">移动端</a></span><div class="content"><h2 id="一、为什么要做适配"><a href="#一、为什么要做适配" class="headerlink" title="一、为什么要做适配"></a>一、为什么要做适配</h2><ul>
+<li>为了适应各种移动端设备，完美呈现应有的布局效果</li>
+<li>各个移动端设备，分辨率大小不一致，网页想铺满整个屏幕，并在各种分辨下等比缩放</li>
+</ul>
+<h2 id="二、适配方案"><a href="#二、适配方案" class="headerlink" title="二、适配方案"></a>二、适配方案</h2><ul>
+<li>固定高度，宽度百分比适配-布局非常均匀，适合百分比布局</li>
+<li>固定宽度，改变缩放比例适配-什么情况都可以</li>
+<li><code>Rem</code>适配</li>
+<li>像素比适配</li>
+</ul>
+<h2 id="三、单位"><a href="#三、单位" class="headerlink" title="三、单位"></a>三、单位</h2><ul>
+<li><code>em</code>根据元素自身的字体大小计算,元素自身 <code>16px</code> <code>1em=16px</code></li>
+<li><code>Rem</code> <code>R -&gt; root</code> 根节点( <code>html</code> ) 根据<code>html</code>的字体大小计算其他元素尺寸</li>
+</ul>
+<h2 id="四、百分比适配-常用"><a href="#四、百分比适配-常用" class="headerlink" title="四、百分比适配(常用)"></a>四、百分比适配(常用)</h2><blockquote>
+<p>固定高度，宽度百分比适配</p>
+</blockquote>
+<ul>
+<li>根据设置的大小去设置高度，单位可以用<code>px</code> 百分比 <code>auto</code></li>
+<li>常用<code>Flex</code>布局</li>
+<li>百分比宽度</li>
+</ul>
+<blockquote>
+<p>以<code>640</code>设计稿为例，在外层容器上设置最大以及最小的宽</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#wrapper &#123;</span><br><span class="line">    max-width: 640px; /*设置设计稿的宽度*/</span><br><span class="line">    min-width: 300px;</span><br><span class="line">    margin: 0 auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>后面的区块布局都用百分比，具体元素大小用<code>px</code>计算</p>
+</blockquote>
+<ul>
+<li>也就是宽度用百分比，高度用<code>px</code></li>
+<li>高度以及图片不要定死，让它自动撑开</li>
+</ul>
+<h2 id="五、Rem适配-常用"><a href="#五、Rem适配-常用" class="headerlink" title="五、Rem适配(常用)"></a>五、Rem适配(常用)</h2><ul>
+<li>根据屏幕的分辨率动态设置<code>html</code>的文字大小，达到等比缩放的功能</li>
+<li>保证<code>html</code>最终算出来的字体大小，不能小于<code>12px</code></li>
+<li>在不同的移动端显示不同的元素比例效果</li>
+<li>如果<code>html</code>的<code>font-size:20px</code>的时候，那么此时的<code>1rem = 20px</code></li>
+<li>把设计图的宽度分成多少分之一，根据实际情况</li>
+<li><code>rem</code>做盒子的宽度，<code>viewport</code>缩放</li>
+</ul>
+<blockquote>
+<p><code>head</code>加入常见的<code>meta</code>属性</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&gt;</span><br><span class="line">&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;</span><br><span class="line">&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot;&gt;</span><br><span class="line">&lt;!--这个是关键--&gt;</span><br><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0，minimum-scale=1.0&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>把这段代码加入<code>head</code>中的<code>script</code>预先加载</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">// rem适配用这段代码动态计算html的font-size大小</span><br><span class="line">(function(win) &#123;</span><br><span class="line">    var docEl = win.document.documentElement;</span><br><span class="line">    var timer = &#x27;&#x27;;</span><br><span class="line"></span><br><span class="line">    function changeRem() &#123;</span><br><span class="line">        var width = docEl.getBoundingClientRect().width;</span><br><span class="line">        if (width &gt; 750) &#123; // 750是设计稿大小</span><br><span class="line">            width = 750;</span><br><span class="line">        &#125;</span><br><span class="line">        var fontS = width / 10; // 把设备宽度十等分 1rem=10px</span><br><span class="line">        docEl.style.fontSize = fontS + &quot;px&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    win.addEventListener(&quot;resize&quot;, function() &#123;</span><br><span class="line">        clearTimeout(timer);</span><br><span class="line">        timer = setTimeout(changeRem, 30);</span><br><span class="line">    &#125;, false);</span><br><span class="line">    win.addEventListener(&quot;pageshow&quot;, function(e) &#123;</span><br><span class="line">        if (e.persisted) &#123; //清除缓存</span><br><span class="line">            clearTimeout(timer);</span><br><span class="line">            timer = setTimeout(changeRem, 30);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, false);</span><br><span class="line">    changeRem();</span><br><span class="line">&#125;)(window)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>或者使用淘宝提供的库 <a target="_blank" rel="noopener" href="https://github.com/amfe/lib-flexible">https://github.com/amfe/lib-flexible</a></li>
+</ul>
+<p><strong>布局细节</strong></p>
+<ul>
+<li>结构用<code>section</code>区块划分更语义化</li>
+<li>然后在<code>body</code>设置宽度</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">    width: 10rem;</span><br><span class="line">    margin: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>后面的区块都以百分比布局</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;wrapper&quot;&gt;</span><br><span class="line">   &lt;header&gt;&lt;header&gt;</span><br><span class="line">   &lt;section&gt;&lt;section&gt;</span><br><span class="line">   &lt;section&gt;&lt;section&gt;</span><br><span class="line">   &lt;section&gt;&lt;section&gt;</span><br><span class="line">   &lt;section&gt;&lt;section&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">section,</span><br><span class="line">header &#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>把视觉稿中的 px 转换成 rem</strong></p>
+<blockquote>
+<p>首先，目前日常工作当中，视觉设计师给到前端开发人员手中的视觉稿尺寸一般是基于 <code>640px</code> 、 <code>750px</code> 以及 <code>1125px</code> 宽度为准。甚至为什么？大家应该懂的（考虑<code>Retina</code>屏）</p>
+</blockquote>
+<blockquote>
+<p>假定设计稿的大小为<code>750</code>，那么我们则将整个图分成<code>10</code>等份来看。`` 对应的 <code>font-size</code>为<code>75px</code></p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">html&#123;</span><br><span class="line">	font-size: 75px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这样一来，对于视觉稿上的元素尺寸换算，只需要原始的 <code>px</code>值 除以 <code>rem</code>基准值 即可</li>
+</ul>
+<blockquote>
+<p>那么，我们现在就可以比对设计稿，比如设计稿中，有一个<code>div</code>元素，宽度，高度都为<code>20px</code>,那么我们这样写即可（可以用 <code>markman</code>标准设计稿的元素大小）</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">	height: 0.27rem; /*20/75*/</span><br><span class="line">	width: 0.27rem;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>动态计算的<code>rem</code>最后会帮我们动态计算元素在不同屏幕下的宽高</li>
+<li>对于设计稿上的每个元素的尺寸在设计稿大小已知的时候，我们需要测量出，然后在用测量的宽高除以设计稿<code>750</code>的十分之一也就是<code>75</code>,得到我们想要的<code>rem</code>。而<code>rem</code>是根据屏幕动态变化的，也就达到了适配的效果。也就是同一套设计稿运用在不同的设备上。</li>
+</ul>
+<blockquote>
+<p>比如当我们切换到<code>320</code>设备大小的时候，这时候<code>1rem=32px;</code> <code>div</code>的像素实际是<code>0.27*32=8.64px``0.27</code>是我们在已知设计稿是<code>750</code>的情况下计算出来的，<code>rem</code>用来动态计算而已</p>
+</blockquote>
+<ul>
+<li>对于<code>margin</code> <code>padding</code> <code>line-height</code> <code>width</code> <code>height</code>使用<code>rem</code>计算</li>
+</ul>
+<p><strong>如何快速计算</strong></p>
+<blockquote>
+<p>在实际生产当中，如果每一次计算 <code>px</code> 转换 <code>rem</code> ，或许会觉得非常麻烦</p>
+</blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/flashlizi/cssrem"><code>CSSREM</code></a> 是一个<code>CSS</code>的 <code>px</code> 值转 <code>rem</code> 值的<code>Sublime Text3</code>自动完成插件</li>
+<li>插件效果</li>
+</ul>
+<p><img src="https://github.com/poetries/cssrem/raw/master/cssrem.gif" alt="img"></p>
+<blockquote>
+<p>插件使用方法</p>
+</blockquote>
+<ul>
+<li><p>安装</p>
+<ul>
+<li>下载本项目，比如：git clone <a target="_blank" rel="noopener" href="https://github.com/flashlizi/cssrem">https://github.com/flashlizi/cssrem</a></li>
+<li>进入<code>packages</code>目录：<code>Sublime Text</code> -&gt; <code>Preferences</code> -&gt; <code>Browse Packages</code>…</li>
+<li>复制下载的<code>cssrem</code>目录到刚才的packges目录里。</li>
+<li>重启<code>Sublime Text</code></li>
+</ul>
+</li>
+<li><p>配置参数</p>
+<ul>
+<li><p>参数配置文件：<code>Sublime Text -&gt; Preferences -&gt; Package Settings -&gt; cssrem</code></p>
+</li>
+<li><p><code>px_to_rem</code> - <code>px</code>转<code>rem</code>的单位比例，默认为<code>40</code>【根据设计稿来设置，如设计稿<code>750</code>，我们取十分之一即<code>75</code>】。</p>
+</li>
+<li><p><code>max_rem_fraction_length</code> - <code>px</code>转<code>rem</code>的小数部分的最大长度。默认为<code>6</code>。</p>
+</li>
+<li><p><code>available_file_types</code> - 启用此插件的文件类型。默认为：[“<code>.css</code>“, “<code>.less</code>“, “<code>.sass</code>“]。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>文字适配的解决方案</strong></p>
+<ul>
+<li>对于一些标题性的文字，我们依然可以用<code>rem</code>。让他随着屏幕来进行缩放，因为标题性文字一般较大，而较大的文字，点阵对其影响就越小。这样，即使出现奇怪的尺寸，也能够让字体得到很好的渲染。</li>
+<li>对于一些正文内容的文字（即站在使用者的角度，你不希望他进行缩放的文字）。我们采用<code>px</code>来进行处理</li>
+</ul>
+<h2 id="六、缩放比适配"><a href="#六、缩放比适配" class="headerlink" title="六、缩放比适配"></a>六、缩放比适配</h2><blockquote>
+<p>固定宽度，改变缩放比例适配</p>
+</blockquote>
+<ul>
+<li>设计图的宽度就是网页显示的宽度</li>
+<li>改变视口的缩放比例</li>
+<li>页面宽度固定死</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 缩放比例适配方案--用这个代码 </span><br><span class="line">var width = window.screen.width,</span><br><span class="line">    fixedW = 320, //设计稿宽度的一半</span><br><span class="line">    scale = width / fixedW, // 缩放比例</span><br><span class="line">    meta = document.createElement(&#x27;meta&#x27;),</span><br><span class="line">    metaAttr = &#123;</span><br><span class="line">        name : &#x27;viewport&#x27;,</span><br><span class="line">        content : &#x27;width=&#x27;+fixedW+&#x27;, initial-scale=&#x27;+scale+&#x27;, maximum-scale=&#x27;+scale+&#x27;, user-scalable=0&#x27;</span><br><span class="line">    &#125;;</span><br><span class="line">    for (var key in metaAttr) &#123;</span><br><span class="line">        meta[key] = metaAttr[key];</span><br><span class="line">    &#125;</span><br><span class="line">    document.head.appendChild(meta);</span><br></pre></td></tr></table></figure>
+
+<h2 id="七、像素比适配"><a href="#七、像素比适配" class="headerlink" title="七、像素比适配"></a>七、像素比适配</h2><ul>
+<li><code>window.devicePixelRatio</code></li>
+<li>物理像素是手机屏幕分辨率</li>
+<li>独立像素 指<code>css</code>像素 屏幕宽度</li>
+<li>像素比 = 物理像素 / <code>css宽度</code></li>
+<li>获取设备的像素比 <code>window.devicePixelRatio</code></li>
+</ul>
+<h2 id="八、小结"><a href="#八、小结" class="headerlink" title="八、小结"></a>八、小结</h2><blockquote>
+<p>关于移动端布局方案有很多，<code>rem</code>和百分比运用最多的</p>
+</blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://ymblog.net/2015/07/01/%E7%A7%BB%E5%8A%A8%E5%89%8D%E7%AB%AFmeta%E6%A0%87%E7%AD%BE%E8%BD%AC/">http://ymblog.net/2015/07/01/移动前端meta标签转/</a>)</li>
+</ul>
+</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2018/02/02/1-flex/">flex布局</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-02-02</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/html/">html</a></span><div class="content"><h2 id="一、Flex-布局是什么？"><a href="#一、Flex-布局是什么？" class="headerlink" title="一、Flex 布局是什么？"></a>一、Flex 布局是什么？</h2><p>Flex 是 Flexible Box 的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。</p>
+<p>任何一个容器都可以指定为 Flex 布局。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>行内元素也可以使用 Flex 布局。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>Webkit 内核的浏览器，必须加上<code>-webkit</code>前缀。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">display</span>: -webkit-flex; <span class="comment">/* Safari */</span></span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>注意，设为 Flex 布局以后，子元素的<code>float</code>、<code>clear</code>和<code>vertical-align</code>属性将失效。</p>
+<h2 id="二、基本概念"><a href="#二、基本概念" class="headerlink" title="二、基本概念"></a>二、基本概念</h2><p>采用 Flex 布局的元素，称为 Flex 容器（flex container），简称”容器”。它的所有子元素自动成为容器成员，称为 Flex 项目（flex item），简称”项目”。</p>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071004.png" alt="img"></p>
+<p>容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做<code>main start</code>，结束位置叫做<code>main end</code>；交叉轴的开始位置叫做<code>cross start</code>，结束位置叫做<code>cross end</code>。</p>
+<p>项目默认沿主轴排列。单个项目占据的主轴空间叫做<code>main size</code>，占据的交叉轴空间叫做<code>cross size</code>。</p>
+<h2 id="三、容器的属性"><a href="#三、容器的属性" class="headerlink" title="三、容器的属性"></a>三、容器的属性</h2><p>以下6个属性设置在容器上。</p>
+<blockquote>
+<ul>
+<li>flex-direction</li>
+<li>flex-wrap</li>
+<li>flex-flow</li>
+<li>justify-content</li>
+<li>align-items</li>
+<li>align-content</li>
+</ul>
+</blockquote>
+<h3 id="3-1-flex-direction属性"><a href="#3-1-flex-direction属性" class="headerlink" title="3.1 flex-direction属性"></a>3.1 flex-direction属性</h3><p><code>flex-direction</code>属性决定主轴的方向（即项目的排列方向）。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">flex-direction</span>: row | row-reverse | column | column-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071005.png" alt="img"></p>
+<p>它可能有4个值。</p>
+<blockquote>
+<ul>
+<li><code>row</code>（默认值）：主轴为水平方向，起点在左端。</li>
+<li><code>row-reverse</code>：主轴为水平方向，起点在右端。</li>
+<li><code>column</code>：主轴为垂直方向，起点在上沿。</li>
+<li><code>column-reverse</code>：主轴为垂直方向，起点在下沿。</li>
+</ul>
+</blockquote>
+<h3 id="3-2-flex-wrap属性"><a href="#3-2-flex-wrap属性" class="headerlink" title="3.2 flex-wrap属性"></a>3.2 flex-wrap属性</h3><p>默认情况下，项目都排在一条线（又称”轴线”）上。<code>flex-wrap</code>属性定义，如果一条轴线排不下，如何换行。</p>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071006.png" alt="img"></p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">flex-wrap</span>: nowrap | wrap | wrap-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>它可能取三个值。</p>
+<p>（1）<code>nowrap</code>（默认）：不换行。</p>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071007.png" alt="img"></p>
+<p>（2）<code>wrap</code>：换行，第一行在上方。</p>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071008.jpg" alt="img"></p>
+<p>（3）<code>wrap-reverse</code>：换行，第一行在下方。</p>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071009.jpg" alt="img"></p>
+<h3 id="3-3-flex-flow"><a href="#3-3-flex-flow" class="headerlink" title="3.3 flex-flow"></a>3.3 flex-flow</h3><p><code>flex-flow</code>属性是<code>flex-direction</code>属性和<code>flex-wrap</code>属性的简写形式，默认值为<code>row nowrap</code>。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">flex-flow</span>: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="3-4-justify-content属性"><a href="#3-4-justify-content属性" class="headerlink" title="3.4 justify-content属性"></a>3.4 justify-content属性</h3><p><code>justify-content</code>属性定义了项目在主轴上的对齐方式。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">justify-content</span>: flex-start | flex-end | center | space-between | space-around;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071010.png" alt="img"></p>
+<p>它可能取5个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。</p>
+<blockquote>
+<ul>
+<li><code>flex-start</code>（默认值）：左对齐</li>
+<li><code>flex-end</code>：右对齐</li>
+<li><code>center</code>： 居中</li>
+<li><code>space-between</code>：两端对齐，项目之间的间隔都相等。</li>
+<li><code>space-around</code>：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
+</ul>
+</blockquote>
+<h3 id="3-5-align-items属性"><a href="#3-5-align-items属性" class="headerlink" title="3.5 align-items属性"></a>3.5 align-items属性</h3><p><code>align-items</code>属性定义项目在交叉轴上如何对齐。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">align-items</span>: flex-start | flex-end | center | baseline | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071011.png" alt="img"></p>
+<p>它可能取5个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。</p>
+<blockquote>
+<ul>
+<li><code>flex-start</code>：交叉轴的起点对齐。</li>
+<li><code>flex-end</code>：交叉轴的终点对齐。</li>
+<li><code>center</code>：交叉轴的中点对齐。</li>
+<li><code>baseline</code>: 项目的第一行文字的基线对齐。</li>
+<li><code>stretch</code>（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</li>
+</ul>
+</blockquote>
+<h3 id="3-6-align-content属性"><a href="#3-6-align-content属性" class="headerlink" title="3.6 align-content属性"></a>3.6 align-content属性</h3><p><code>align-content</code>属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">align-content</span>: flex-start | flex-end | center | space-between | space-around | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071012.png" alt="img"></p>
+<p>该属性可能取6个值。</p>
+<blockquote>
+<ul>
+<li><code>flex-start</code>：与交叉轴的起点对齐。</li>
+<li><code>flex-end</code>：与交叉轴的终点对齐。</li>
+<li><code>center</code>：与交叉轴的中点对齐。</li>
+<li><code>space-between</code>：与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
+<li><code>space-around</code>：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
+<li><code>stretch</code>（默认值）：轴线占满整个交叉轴。</li>
+</ul>
+</blockquote>
+<h3 id="四、项目的属性"><a href="#四、项目的属性" class="headerlink" title="四、项目的属性"></a>四、项目的属性</h3><p>以下6个属性设置在项目上。</p>
+<blockquote>
+<ul>
+<li><code>order</code></li>
+<li><code>flex-grow</code></li>
+<li><code>flex-shrink</code></li>
+<li><code>flex-basis</code></li>
+<li><code>flex</code></li>
+<li><code>align-self</code></li>
+</ul>
+</blockquote>
+<h3 id="4-1-order属性"><a href="#4-1-order属性" class="headerlink" title="4.1 order属性"></a>4.1 order属性</h3><p><code>order</code>属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">order</span>: &lt;integer&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071013.png" alt="img"></p>
+<h3 id="4-2-flex-grow属性"><a href="#4-2-flex-grow属性" class="headerlink" title="4.2 flex-grow属性"></a>4.2 flex-grow属性</h3><p><code>flex-grow</code>属性定义项目的放大比例，默认为<code>0</code>，即如果存在剩余空间，也不放大。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">flex-grow</span>: &lt;number&gt;; <span class="comment">/* default 0 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071014.png" alt="img"></p>
+<p>如果所有项目的<code>flex-grow</code>属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的<code>flex-grow</code>属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。</p>
+<h3 id="4-3-flex-shrink属性"><a href="#4-3-flex-shrink属性" class="headerlink" title="4.3 flex-shrink属性"></a>4.3 flex-shrink属性</h3><p><code>flex-shrink</code>属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">flex-shrink</span>: &lt;number&gt;; <span class="comment">/* default 1 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071015.jpg" alt="img"></p>
+<p>如果所有项目的<code>flex-shrink</code>属性都为1，当空间不足时，都将等比例缩小。如果一个项目的<code>flex-shrink</code>属性为0，其他项目都为1，则空间不足时，前者不缩小。</p>
+<p>负值对该属性无效。</p>
+<h3 id="4-4-flex-basis属性"><a href="#4-4-flex-basis属性" class="headerlink" title="4.4 flex-basis属性"></a>4.4 flex-basis属性</h3><p><code>flex-basis</code>属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为<code>auto</code>，即项目的本来大小。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">flex-basis</span>: &lt;length&gt; | auto; <span class="comment">/* default auto */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>它可以设为跟<code>width</code>或<code>height</code>属性一样的值（比如350px），则项目将占据固定空间。</p>
+<h3 id="4-5-flex属性"><a href="#4-5-flex属性" class="headerlink" title="4.5 flex属性"></a>4.5 flex属性</h3><p><code>flex</code>属性是<code>flex-grow</code>, <code>flex-shrink</code> 和 <code>flex-basis</code>的简写，默认值为<code>0 1 auto</code>。后两个属性可选。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">flex</span>: none | [ &lt;<span class="string">&#x27;flex-grow&#x27;</span>&gt; &lt;<span class="string">&#x27;flex-shrink&#x27;</span>&gt;? || &lt;<span class="string">&#x27;flex-basis&#x27;</span>&gt; ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>该属性有两个快捷值：<code>auto</code> (<code>1 1 auto</code>) 和 none (<code>0 0 auto</code>)。</p>
+<p>建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。</p>
+<h3 id="4-6-align-self属性"><a href="#4-6-align-self属性" class="headerlink" title="4.6 align-self属性"></a>4.6 align-self属性</h3><p><code>align-self</code>属性允许单个项目有与其他项目不一样的对齐方式，可覆盖<code>align-items</code>属性。默认值为<code>auto</code>，表示继承父元素的<code>align-items</code>属性，如果没有父元素，则等同于<code>stretch</code>。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">align-self</span>: auto | flex-start | flex-end | center | baseline | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071016.png" alt="img"></p>
+<p>该属性可能取6个值，除了auto，其他都与align-items属性完全一致。</p>
+</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2018/01/28/1-%E9%9F%B3%E8%A7%86%E9%A2%91/">html-原生音视频</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-01-28</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/%E9%9F%B3%E8%A7%86%E9%A2%91/">音视频</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/html/">html</a></span><div class="content"><h2 id="一、video"><a href="#一、video" class="headerlink" title="一、video"></a>一、video</h2><hr>
+<h3 id="1-1-video支持视频格式"><a href="#1-1-video支持视频格式" class="headerlink" title="1.1 video支持视频格式"></a>1.1 video支持视频格式</h3><hr>
+<ul>
+<li><p>常见的视频格式</p>
+<ul>
+<li>视频的组成部分：画面、音频、编码格式</li>
+<li>视频编码：<code>H.264</code>、<code>Theora</code>、<code>VP8(google开源)</code></li>
+</ul>
+</li>
+<li><p><code>HTML5</code>支持的视频格式：</p>
+<ul>
+<li><p>```<br>Ogg</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 带有</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>  Theora</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">视频编码+</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>  Vorbis</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">音频编码的</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>  Ogg</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    文件</span><br><span class="line"></span><br><span class="line">    - 支持的浏览器:`F`、`C`、`O`</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  MEPG4</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>带有<code>H.264</code>视频编码+<code>AAC</code>音频编码的<code>MPEG4</code>文件</li>
+<li>支持的浏览器: <code>S</code>、<code>C</code></li>
+</ul>
+</li>
+<li><p>```<br>WebM</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    - 带有`VP8`视频编码+`Vorbis`音频编码的`WebM`格式</span><br><span class="line">    - 支持的浏览器: `I`、`F`、`C`、`O`</span><br><span class="line">    - 劣势：视频少、转码器几乎没有，不好转码</span><br><span class="line"></span><br><span class="line">- 想要`video`能自动填充慢父div的大小，只要给`video`标签加上`style=&quot;width= 100%; height=100%; object-fit: fill&quot;`即可</span><br><span class="line"></span><br><span class="line">### 1.2 标签原型</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">- 指定一种视频格式，不能播就提示</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><video id="media" src="examp.mp4" width="500" 
+poster="examp1.jpg" >您的浏览器不支持video</video></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 给定多种视频格式，浏览器根据自身支持程度选择播放哪一种</span><br><span class="line">- 注意：多个`source`标签，浏览器会从第一个开始识别，如果第一个不被识别，则会继续识别第二个；如果第一个识别成功，则会直接播放第一种格式视频</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<video controls = “controls”></li>
+</ul>
+ <source src=”1.mp4” type=”video/mp4” />  //src属性写到source标签中，要指定视频的type类型，例如MP4的即为type=“video/mp4”
+
+ <source src = “2.ogg” type=”video/ogg” />  //ogg格式
+
+ <source src=”3.webm” type=”video/webm” />   //webm格式</li>
+</ul>
+</video>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 1.3 重要的video标签属性</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">| 属性(常用)     | 值            | 功能描述                                       |</span><br><span class="line">| :------------- | :------------ | :--------------------------------------------- |</span><br><span class="line">| **controls**   | controls      | 是否显示播放控件                               |</span><br><span class="line">| **autoplay**   | autoplay      | 设置是否打开浏览器后自动播放                   |</span><br><span class="line">| **width**      | Pilex（像素） | 设置播放器的宽度                               |</span><br><span class="line">| **height**     | Pilex（像素） | 设置播放器的高度                               |</span><br><span class="line">| **loop**       | loop          | 设置视频是否循环播放（即播放完后继续重新播放） |</span><br><span class="line">| **preload**    | preload       | 设置是否等加载完再播放                         |</span><br><span class="line">| **src**        | url           | 设置要播放视频的url地址                        |</span><br><span class="line">| **poster**     | imgurl        | 设置播放器初始默认显示图片                     |</span><br><span class="line">| **autobuffer** | autobuffer    | 设置为浏览器缓冲方式，不设置autoply才有效      |</span><br><span class="line"></span><br><span class="line">- API 属性</span><br><span class="line"></span><br><span class="line">| 属性                | 描述                                                       |</span><br><span class="line">| :------------------ | :--------------------------------------------------------- |</span><br><span class="line">| audioTracks         | 返回表示可用音轨的 AudioTrackList 对象                     |</span><br><span class="line">| buffered            | 返回表示音频/视频已缓冲部分的 TimeRanges 对象              |</span><br><span class="line">| controller          | 返回表示音频/视频当前媒体控制器的 MediaController 对象     |</span><br><span class="line">| crossOrigin         | 设置或返回音频/视频的 CORS 设置                            |</span><br><span class="line">| currentSrc          | 返回当前音频/视频的 URL                                    |</span><br><span class="line">| currentTime         | 设置或返回音频/视频中的当前播放位置（以秒计）              |</span><br><span class="line">| defaultMuted        | 设置或返回音频/视频默认是否静音                            |</span><br><span class="line">| defaultPlaybackRate | 设置或返回音频/视频的默认播放速度                          |</span><br><span class="line">| duration            | 返回当前音频/视频的长度（以秒计）                          |</span><br><span class="line">| ended               | 返回音频/视频的播放是否已结束                              |</span><br><span class="line">| error               | 返回表示音频/视频错误状态的 MediaError 对象                |</span><br><span class="line">| mediaGroup          | 设置或返回音频/视频所属的组合（用于连接多个音频/视频元素） |</span><br><span class="line">| muted               | 设置或返回音频/视频是否静音                                |</span><br><span class="line">| networkState        | 返回音频/视频的当前网络状态                                |</span><br><span class="line">| paused              | 设置或返回音频/视频是否暂停                                |</span><br><span class="line">| playbackRate        | 设置或返回音频/视频播放的速度                              |</span><br><span class="line">| played              | 返回表示音频/视频已播放部分的 TimeRanges 对象              |</span><br><span class="line">| readyState          | 返回音频/视频当前的就绪状态                                |</span><br><span class="line">| seekable            | 返回表示音频/视频可寻址部分的 TimeRanges 对象              |</span><br><span class="line">| seeking             | 返回用户是否正在音频/视频中进行查找                        |</span><br><span class="line">| startDate           | 返回表示当前时间偏移的 Date 对象                           |</span><br><span class="line">| textTracks          | 返回表示可用文本轨道的 TextTrackList 对象                  |</span><br><span class="line">| videoTracks         | 返回表示可用视频轨道的 VideoTrackList 对象                 |</span><br><span class="line">| volume              | 设置或返回音频/视频的音量                                  |</span><br><span class="line"></span><br><span class="line">- 常用API属性</span><br><span class="line"></span><br><span class="line">  - `duration`：返回当前音频/视频的长度（以秒计）</span><br><span class="line">  - `paused`：设置或返回音频/视频是否暂停</span><br><span class="line">  - `currentTime`：设置或返回音频/视频中的当前播放位置（以秒计）</span><br><span class="line">  - `ended`：返回音频/视频的播放是否已结束</span><br><span class="line"></span><br><span class="line">  ### 1.4 Video API</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">#### 1.4.1 Video 方法</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">| API             | 事件说明                                                     |</span><br><span class="line">| :-------------- | :----------------------------------------------------------- |</span><br><span class="line">| **play**        | video.play(); 播放视频                                       |</span><br><span class="line">| **pause**       | video.pause(); 暂停播放视频                                  |</span><br><span class="line">| **load**        | video.load(); 将全部属性回复默认值，视频恢复重新开始状态     |</span><br><span class="line">| **canPlayType** | var support = videoid.canPlayType(‘video/mp4′);   判断浏览器是否支持当前类型的视频格式  返回值：     空字符串：不支持Maybe：可能支持Probably：完全支持 |</span><br><span class="line"></span><br><span class="line">- 常用方法</span><br><span class="line">  - `play()`：开始播放音频/视频</span><br><span class="line">  - `pause()`：暂停当前播放的音频/视频</span><br><span class="line"></span><br><span class="line">#### 1.4.2网络状态</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">- 获取video对象</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+  Media = document.getElementById("media");
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- Media.currentSrc</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 返回当前资源的URL</span><br><span class="line"></span><br><span class="line">- Media.src = value</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 返回或设置当前资源的URL</span><br><span class="line"></span><br><span class="line">- Media.canPlayType(type)</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 是否能播放某种格式的资源</span><br><span class="line"></span><br><span class="line">- Media.networkState</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 0.此元素未初始化</span><br><span class="line">  - 1.正常但没有使用网络</span><br><span class="line">  - 2.正在下载数据</span><br><span class="line">  - 3.没有找到资源</span><br><span class="line"></span><br><span class="line">- Media.load()</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 重新加载src指定的资源</span><br><span class="line"></span><br><span class="line">- Media.buffered</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 返回已缓冲区域，TimeRanges</span><br><span class="line"></span><br><span class="line">- Media.preload</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - none:不预载</span><br><span class="line">  - metadata:预载资源信息</span><br><span class="line">  - auto:</span><br><span class="line"></span><br><span class="line">#### 1.4.3 准备状态</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">- **Media.readyState**</span><br><span class="line"></span><br><span class="line">- Media.seeking</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 是否正在seeking</span><br><span class="line"></span><br><span class="line">#### 1.4.4 回放状态</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">- Media.currentTime = value</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 当前播放的位置，赋值可改变位置</span><br><span class="line"></span><br><span class="line">- Media.startTime;</span><br><span class="line"></span><br><span class="line">  - 一般为0，如果为流媒体或者不从0开始的资源，则不为0</span><br><span class="line"></span><br><span class="line">- Media.duration</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 当前资源长度 流返回无限</span><br><span class="line"></span><br><span class="line">- Media.paused</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 是否暂停</span><br><span class="line"></span><br><span class="line">- Media.defaultPlaybackRate = value</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 默认的回放速度，可以设置</span><br><span class="line"></span><br><span class="line">- Media.playbackRate = value</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 当前播放速度，设置后马上改变</span><br><span class="line"></span><br><span class="line">- Media.played</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 返回已经播放的区域，TimeRanges，关于此对象见下文</span><br><span class="line"></span><br><span class="line">- Media.seekable</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 返回可以seek的区域 TimeRanges</span><br><span class="line"></span><br><span class="line">- Media.ended</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 是否结束</span><br><span class="line"></span><br><span class="line">- Media.autoPlay</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 是否自动播放</span><br><span class="line"></span><br><span class="line">- Media.loop</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 是否循环播放</span><br><span class="line"></span><br><span class="line">- Media.play()</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 播放</span><br><span class="line"></span><br><span class="line">- Media.pause()</span><br><span class="line"></span><br><span class="line">  ;</span><br><span class="line"></span><br><span class="line">  - 暂停</span><br><span class="line"></span><br><span class="line">#### 1.4.5 视频控制</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">- Media.controls;//是否有默认控制条</span><br><span class="line">- Media.volume = value; //音量</span><br><span class="line">- Media.muted = value; //静音</span><br><span class="line">- TimeRanges(区域)对象</span><br><span class="line">- TimeRanges.length; //区域段数</span><br><span class="line">- TimeRanges.start(index) //第index段区域的开始位置</span><br><span class="line">- TimeRanges.end(index) //第index段区域的结束位置</span><br><span class="line"></span><br><span class="line">#### 1.4.6 相关事件</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">- 首先绑定事件的话可以通过js中的addEventListener方法来绑定事件</span><br><span class="line"></span><br><span class="line">| 事件               | 说明                                   |</span><br><span class="line">| :----------------- | :------------------------------------- |</span><br><span class="line">| **loadstart**      | 客户端开始请求数据                     |</span><br><span class="line">| **progress**       | 客户端正在请求数据                     |</span><br><span class="line">| **suspend**        | 延迟下载                               |</span><br><span class="line">| **abort**          | 客户端主动终止下载（不是因为错误引起） |</span><br><span class="line">| **loadstart**      | 客户端开始请求数据                     |</span><br><span class="line">| **progress**       | 客户端正在请求数据                     |</span><br><span class="line">| **error**          | 请求数据时遇到错误                     |</span><br><span class="line">| **stalled**        | 网速失速                               |</span><br><span class="line">| **play**           | play()和autoplay开始播放时触发         |</span><br><span class="line">| **pause**          | pause()触发                            |</span><br><span class="line">| **loadedmetadata** | 成功获取资源长度                       |</span><br><span class="line">| **loadeddata**     | -                                      |</span><br><span class="line">| **waiting**        | 等待数据，并非错误                     |</span><br><span class="line">| **playing**        | 开始回放                               |</span><br><span class="line">| **canplay**        | 可以播放，但中途可能因为加载而暂停     |</span><br><span class="line">| **canplaythrough** | 可以播放，歌曲全部加载完毕             |</span><br><span class="line">| **seeking**        | 寻找中                                 |</span><br><span class="line">| **seeked**         | 寻找完毕                               |</span><br><span class="line">| **timeupdate**     | 播放时间改变                           |</span><br><span class="line">| **ended**          | 播放结束                               |</span><br><span class="line">| **ratechange**     | 播放速率改变                           |</span><br><span class="line">| **durationchange** | 资源长度改变                           |</span><br><span class="line">| **volumechange**   | 音量改变                               |</span><br><span class="line"></span><br><span class="line">- 常用事件</span><br><span class="line">  - `oncanplay`：当文件就绪可以开始播放时运行的脚本（缓冲已足够开始时）。</span><br><span class="line">  - `ontimeupdate`： 当播放位置改变时（比如当用户快进到媒介中一个不同的位置时）运行的脚本。</span><br><span class="line">  - `onended`：当媒介已到达结尾时运行的脚本（可发送类似“感谢观看”之类的消息）。</span><br><span class="line"></span><br><span class="line">#### 1.4.7 其他</span><br><span class="line"></span><br><span class="line">- 全屏:</span><br><span class="line">  - `element.webkitRequestFullScreen();`( webkit)</span><br><span class="line">  - `element.mozRequestFullScreen();` (Firefox )</span><br><span class="line">  - `element.requestFullscreen();` (W3C )</span><br><span class="line">- 退出全屏：</span><br><span class="line">  - `document.webkitCancelFullScreen()`; (webkit )</span><br><span class="line">  - `document.mozCancelFullScreen()`; (Firefox)</span><br><span class="line">  - `document.exitFullscreen();` (W3C)</span><br><span class="line"></span><br><span class="line">## 二、audio</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">### 2.1 audio格式</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">- 常见的音频格式</span><br><span class="line">  - 音频编码：`ACC`、`MP3`、`Vorbis`</span><br><span class="line">- HTML5支持的音频格式：</span><br><span class="line">  - `Ogg` 免费 支持的浏览器:`C`、`F`、`O`</span><br><span class="line">  - `MP3` 收费 支持的浏览器: `I`、`C`、`S`</span><br><span class="line">  - `Wav` 收费 支持的浏览器: `F`、`O`、`S`</span><br><span class="line"></span><br><span class="line">### 2.2 audio标签中的一些常用属性</span><br><span class="line"></span><br><span class="line">| 属性         | 属性值   | 注释                                                         |</span><br><span class="line">| :----------- | :------- | :----------------------------------------------------------- |</span><br><span class="line">| **src**      | url      | 播放的音乐的url地址（火狐只支持ogg的音乐，而IE9只支持MP3格式的音乐。chrome貌似全支持） |</span><br><span class="line">| **preload**  | preload  | 预加载（在页面被加载时进行加载或者说缓冲音频），如果使用了autoplay的话那么该属性失效。 |</span><br><span class="line">| **loop**     | loop     | 循环播放                                                     |</span><br><span class="line">| **controls** | controls | 是否显示默认控制条（控制按钮）                               |</span><br><span class="line">| **autoplay** | autoplay | 自动播放                                                     |</span><br><span class="line"></span><br><span class="line">- 对于音乐格式的支持</span><br><span class="line"></span><br><span class="line">| 音频格式 | Chrome | Firefox | IE9    | Opera  | Safari |</span><br><span class="line">| :------- | :----- | :------ | :----- | :----- | :----- |</span><br><span class="line">| OGG      | 支持   | 支持    | 支持   | 不支持 | 不支持 |</span><br><span class="line">| MP3      | 支持   | 不支持  | 支持   | 不支持 | 支持   |</span><br><span class="line">| WAV      | 不支持 | 支持    | 不支持 | 支持   | 不支持 |</span><br><span class="line"></span><br><span class="line">- audio可通过new来创建。也可以通过用document来获取</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+//通过new关键字来创建Audio对象
+var Music = new Audio("test.mp3");
+
+<p>//通过document来获取已经存在的Audio对象<br>var Music = document.getElementById(“audio”);<br>//当然这里也可以使用document.getElementsByClassName(‘className’)等其他的方法来获取。</p>
+<p>```</p>
+<h3 id="2-3-api所提供的对audio标签操作的一些属性和方法"><a href="#2-3-api所提供的对audio标签操作的一些属性和方法" class="headerlink" title="2.3 api所提供的对audio标签操作的一些属性和方法"></a>2.3 api所提供的对audio标签操作的一些属性和方法</h3><hr>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>duration</strong></td>
+<td align="left">获取媒体文件的总时长，以s为单位，如果无法获取，返回NaN</td>
+</tr>
+<tr>
+<td align="left"><strong>paused</strong></td>
+<td align="left">如果媒体文件被暂停，那么paused属性返回true，反之则返回false</td>
+</tr>
+<tr>
+<td align="left"><strong>ended</strong></td>
+<td align="left">如果媒体文件播放完毕返回true</td>
+</tr>
+<tr>
+<td align="left"><strong>muted</strong></td>
+<td align="left">用来获取或设置静音状态。值为boolean</td>
+</tr>
+<tr>
+<td align="left"><strong>volume</strong></td>
+<td align="left">控制音量的属性值为0-1;0为音量最小，1为音量最大</td>
+</tr>
+<tr>
+<td align="left"><strong>startTime</strong></td>
+<td align="left">返回起始播放时间</td>
+</tr>
+<tr>
+<td align="left"><strong>error</strong></td>
+<td align="left">返回错误代码，为uull的时候为正常。否则可以通过Music.error.code来获取</td>
+</tr>
+<tr>
+<td align="left"><strong>currentTime</strong></td>
+<td align="left">用来获取或控制当前播放的时间，单位为s。</td>
+</tr>
+<tr>
+<td align="left"><strong>currentSrc</strong></td>
+<td align="left">以字符串形式返回正在播放或已加载的文件</td>
+</tr>
+</tbody></table>
+<h3 id="2-4-常用的控制用的函数"><a href="#2-4-常用的控制用的函数" class="headerlink" title="2.4 常用的控制用的函数"></a>2.4 常用的控制用的函数</h3><hr>
+<table>
+<thead>
+<tr>
+<th align="left">函数</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>load()</strong></td>
+<td align="left">加载音频、视频软件</td>
+</tr>
+<tr>
+<td align="left"><strong>play()</strong></td>
+<td align="left">加载并播放音频、视频文件或重新播放暂停的的音频、视频</td>
+</tr>
+<tr>
+<td align="left"><strong>pause()</strong></td>
+<td align="left">暂停出于播放状态的音频、视频文件</td>
+</tr>
+<tr>
+<td align="left"><strong>canPlayType(obj)</strong></td>
+<td align="left">测试是否支持给定的Mini类型的文件</td>
+</tr>
+</tbody></table>
+<h3 id="2-5-audio标签API中的常用事件"><a href="#2-5-audio标签API中的常用事件" class="headerlink" title="2.5 audio标签API中的常用事件"></a>2.5 audio标签API中的常用事件</h3><hr>
+<ul>
+<li>首先绑定事件的话可以通过js中的addEventListener方法来绑定事件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">事件名称</th>
+<th align="left">事件作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>loadstart</strong></td>
+<td align="left">客户端开始请求数据</td>
+</tr>
+<tr>
+<td align="left"><strong>progress</strong></td>
+<td align="left">客户端正在请求数据（或者说正在缓冲）</td>
+</tr>
+<tr>
+<td align="left"><strong>play</strong></td>
+<td align="left">play()和autoplay播放时</td>
+</tr>
+<tr>
+<td align="left"><strong>pause</strong></td>
+<td align="left">pause()方法促发时</td>
+</tr>
+<tr>
+<td align="left"><strong>ended</strong></td>
+<td align="left">当前播放结束</td>
+</tr>
+<tr>
+<td align="left"><strong>timeupdate</strong></td>
+<td align="left">当前播放时间发生改变的时候。播放中常用的时间处理</td>
+</tr>
+<tr>
+<td align="left"><strong>canplaythrough</strong></td>
+<td align="left">歌曲已经载入完全完成</td>
+</tr>
+<tr>
+<td align="left"><strong>canplay</strong></td>
+<td align="left">缓冲至目前可播放状态。</td>
+</tr>
+</tbody></table>
+<p>其实<code>video</code>的<code>api</code>和<code>audio</code>几乎一致。稍稍有点不同。所以基本上会了一个其他的也就都会了s</p>
+</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2018/01/26/1-h5-api/">html-api</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-01-26</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/html/">html</a></span><div class="content"><h3 id="一、Canvas-API"><a href="#一、Canvas-API" class="headerlink" title="一、Canvas API"></a>一、Canvas API</h3><hr>
+<p><code>canvas API</code>是<code>H5</code>标准中最复杂的部分， 它提供几种属性和方法，可以在<code>canvas</code>元素上创建图形应用</p>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><hr>
+<p>以下方法专门用于调用canvas API</p>
+<ul>
+<li><code>getContext(context)</code>创建可绘制图形的画布上下文，接受两个值，<code>2d</code>和<code>3d</code></li>
+<li><code>fillRect(x,y,width,height)</code>绘制实心矩形</li>
+<li><code>strokeRect(x,y,width,height)</code>绘制矩形轮廓</li>
+<li><code>clearRect(x,y,width,height)</code>清除画布指定区域内容</li>
+<li><code>createLinearGradient(x1,y1,x2,y2)</code>创建一个线性渐变效果</li>
+<li><code>createRadialGradient(x1,y1,r1,x2,y2,r2)</code>创建一个放射渐变效果</li>
+<li><code>addColorStop(position,color)</code>用于声明渐变颜色<code>position</code>范围是<code>0.0-1.0</code> 用于确定颜色开始变化位置</li>
+<li><code>beginPath()</code>开始一条新路径</li>
+<li><code>closePath()</code>在路径最后实现封闭该路径，它会生成一条直线，连接笔触的最后一个位置与路径的起点。如想要保持路径开放，使用<code>fill()</code>绘图，不用这个方法</li>
+<li><code>stroke()</code> 用于创建路径轮廓</li>
+<li><code>fill()</code>用于绘制实心形状</li>
+<li><code>clip()</code>用于创建一个由路径定义的裁剪区域，只有在落入形状内的内容才绘制到画布上</li>
+<li><code>moveTo(x,y)</code>将虚拟笔触移到新位置，下一个方法会从改点的开始继续设置路径</li>
+<li><code>lineTo(x,y)</code>在新路径上添加一条直线</li>
+<li><code>rect(x,y,width,height)</code>在路径为<code>(x,y)</code>位置上添加<code>width</code>和<code>height</code>矩形</li>
+<li><code>arc(x,y,radius,startAngle,endAngle,direction)</code>在路径上添加一条弧线 ,<code>x</code>,<code>y</code>指定弧线的中心，角度单位为弧度，<code>direction</code>是一个表示顺时针或逆时针的布尔值。使用公式 <code>Math.PI/180x</code>角度，将角度转换为半径</li>
+<li><code>strokeText(text,x,y,max)</code> 直接在画布上绘制文字轮廓。可选参数，max声明文字最大尺寸</li>
+<li><code>fillText(text,x,y,max)</code>直接在画布上绘制实心文字。可选参数，<code>max</code>声明文字最大尺寸</li>
+<li><code>translate(x,y)</code>将画布原点移到点<code>(x,y)</code>处，原点<code>（0,0）</code>初始位置位于<code>canvas</code>所在区域的左上角</li>
+<li><code>rorate(angle)</code>这个方法可以使画布原点为中心发生旋转，角度必须是弧度。使用公式<code>Math.PI/180x</code> 将角度转换为弧度</li>
+<li><code>scale(x,y)</code> 改变画布比例 默认值是<code>（1.0,1.0）</code>这些值可以是负值</li>
+<li><code>transform（m1,m2,m3,m4,dx,dy）</code>修改画布的转换矩阵。新矩阵是基于之前的矩阵得到的</li>
+<li><code>setTransform（m1,m2,m3,m4,dx,dy）</code>修改画布的转换矩阵。重置之前的值，声明新的值</li>
+<li><code>save()</code>保存画布状态，包括转换矩阵、样式属性、裁剪遮罩</li>
+<li><code>restore()</code> 恢复上一次保存的状态</li>
+<li><code>drawImage()</code> 在画布上绘制图像</li>
+</ul>
+<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><hr>
+<p><code>canvas API</code>专用属性列表</p>
+<ul>
+<li><code>rect( x, y, width, height )</code> 绘制矩形</li>
+<li><code>fillRect( x, y, width, height )</code> 绘制被填充的矩形</li>
+<li><code>strokeRect( x, y, width, height )</code> 绘制矩形（无填充）</li>
+<li><code>clearRect( x, y, width, height )</code> 清除指定的矩形内的像素</li>
+<li><code>fill()</code> 填充当前绘图（路径）</li>
+<li><code>stroke()</code>绘制已定义的路径</li>
+<li><code>beginPath()</code> 起始（重置）当前路径</li>
+<li><code>moveTo( x, y )</code> 将笔触移动到指定的坐标(x,y)</li>
+<li><code>lineTo( x, y )</code> 绘制一条从当前位置到指定的坐标(x,y)的直线</li>
+<li><code>clip()</code> 从原始画布剪切任意形状和尺寸的区域</li>
+<li><code>quadraticCurveTo()</code> 创建二次贝塞尔曲线</li>
+<li><code>bezierCurveTo()</code> 创建三次贝塞尔曲线</li>
+<li><code>arc( x, y, radius, startAngle, endAngle, anticlockwise)</code> 绘制圆或圆弧</li>
+<li><code>arcTo( x1, y1, x2, y2, radius)</code> 根据给定点画圆弧，再以直线连接两个点</li>
+<li><code>isPointInPath( x, y )</code> 检测指定的点是否在当前路径中，在则返回true。</li>
+<li><code>fillStyle</code> 设置或返回用于填充绘画的颜色、渐变或模式</li>
+<li><code>strokeStyle</code> 设置或返回用于笔触的颜色、渐变或模式</li>
+<li><code>shadowColor</code> 设置或返回用于阴影的颜色</li>
+<li><code>shadowBlur</code> 设置或返回用于阴影的模糊级别</li>
+<li><code>shadowOffsetX</code> 设置或返回阴影与形状的水平距离</li>
+<li><code>shadowOffsetY</code> 设置或返回阴影与形状的垂直距离</li>
+<li><code>lineCap</code> 设置或返回线条的结束点样式（<code>butt</code>、<code>round</code>、<code>square</code>）</li>
+<li><code>lineJoin</code> 设置或返回当两条线交汇时，边角的类型（<code>bevel</code>、<code>round</code>、miter）</li>
+<li><code>lineWidth</code> 设置或返回当前的线条宽度</li>
+<li><code>miterLimit</code> 设置或返回最大斜接长度</li>
+<li><code>createLinearGradient( x0, y0, x1, y1 )</code> 创建线性渐变</li>
+<li><code>createPattern( image/canvas/video, repeat )</code> 在指定的方向内重复绘制指定的元素</li>
+<li><code>createRadialGradient( x0, y0, r0, x1, y1, r1 )</code>创建径向渐变</li>
+<li><code>addColorStop( stop, color )</code> 规定渐变对象中的颜色和停止位置</li>
+<li><code>font</code> 设置或返回文本内容的当前字体属性（和css的font一样）</li>
+<li><code>textAlign</code> 设置或返回文本内容的当前对齐方式</li>
+<li><code>textBaseline</code> 设置或返回在绘制文本时使用的当前文本基线</li>
+<li><code>fillText( text, x, y )</code> 在画布上绘制“被填充”的文本</li>
+<li><code>strokeText( text, x, y )</code> 在画布上绘制文本（无填充）</li>
+<li><code>measureText( text )</code> 返回包含指定文本宽度的对象（属性width获取宽度）</li>
+<li><code>drawImage( image/canvas, x, y )</code>、drawImage( image/canvas, x, y, width, height )、drawImage( image/canvas, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight )` 在画布上绘制图像、画布或视频</li>
+<li><code>createImageData( width, height )</code>、createImageData(imageData) 绘制ImageData对象</li>
+<li><code>getImageData( x, y, width, height )</code> 返回ImageData对象，该对象为画布上指定的矩形复制像素数据。</li>
+<li><code>putImageData( ImageData, x, y )</code>、putImageData( imageData, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight ) 把图像数据放回画布上。</li>
+<li><code>width</code> 返回ImageData对象的宽度</li>
+<li><code>height</code> 返回<code>ImageData</code>对象的高度</li>
+<li><code>data</code> 返回一个对象，包含指定的ImageData对象的图像数据</li>
+<li><code>globalAlpha</code> 设置或返回绘图的当前alpha或透明度</li>
+<li><code>globalCompositeOperation</code> 设置或返回新图像如何绘制到已有的图像上。</li>
+<li><code>scale( x, y )</code> 缩放当前绘图</li>
+<li><code>translate( x, y )</code> 重新设置画布上的(0,0)位置</li>
+<li><code>rotate( angle )</code> 选择当前绘图，单位为“弧度”，角度转弧度公式<code>（ degrees*Math.PI/180）</code></li>
+<li><code>transform( m11, m12, m21, m22, dx, dy )</code> 替换绘图的当前转换矩阵</li>
+<li><code>setTransform()</code> 将当前转换重置为单元矩阵，然后运行transform()</li>
+<li><code>save()</code> 保存当前环境的状态</li>
+<li><code>restore()</code> 恢复之前保存过的路径状态和属性</li>
+<li><code>getContext(&#39;2d&#39;)</code> 获取<code>2d</code>对象</li>
+<li><code>toDataURL()</code> 将canvas转换成图片，返回地址</li>
+</ul>
+<h4 id="canvas常用总结"><a href="#canvas常用总结" class="headerlink" title="canvas常用总结"></a>canvas常用总结</h4><hr>
+<ul>
+<li><p>标签</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>不支持<code>canvas</code> 的浏览器可以看到的内容</li>
+</ul>
+</li>
+<li><p>```</p>
+<canvas>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  绘制环境</span><br><span class="line"></span><br><span class="line">  - `getContext(&quot;2d&quot;)`;目前支持`2d`的场景</span><br><span class="line"></span><br><span class="line">- 绘制矩形</span><br><span class="line"></span><br><span class="line">  - `rect(L,T,W,H)`:创建一个矩形</span><br><span class="line"></span><br><span class="line">  - `fillRect(L,T,W,H)`:绘制填充的矩形</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    strokeRect(L,T,W,H)</span><br></pre></td></tr></table></figure>
+
+<p>  绘制矩形(无填充)</p>
+<ul>
+<li>默认一像素黑色边框</li>
+</ul>
+</li>
+<li><p>设置绘图</p>
+<ul>
+<li><code>fillStyle</code>:填充颜色(绘制<code>canvas</code>是有顺序的)</li>
+<li><code>lineWidth</code>:线宽度，笔迹粗细</li>
+<li><code>strokeStyle</code>:边线颜色</li>
+</ul>
+</li>
+<li><p>绘制路径</p>
+<ul>
+<li><code>stroke</code> ：绘制，划线(黑色默认)</li>
+<li><code>fill</code> :填充(黑色默认)</li>
+<li><code>rect(矩形区域)</code></li>
+<li><code>clearRect</code> 擦除一个矩形区域</li>
+<li><code>save</code> 进入到XXX（高逼格）状态</li>
+<li><code>restore</code> 退出xxx（高逼格）状态</li>
+</ul>
+</li>
+<li><p>绘制圆形</p>
+<ul>
+<li><code>arc(x,y,半径,起始弧度,结束弧度,旋转方向)</code></li>
+<li><code>x</code>，<code>y</code>起始位置</li>
+<li>弧度与角度：<code>弧度=角度 x π / 180</code></li>
+<li>旋转方向：顺时针（默认：<code>false</code>），逆时针（<code>true</code>）</li>
+</ul>
+</li>
+<li><p>绘制字体</p>
+<ul>
+<li><code>font</code>：设置字体大小</li>
+<li><code>fillText</code>：填充字体</li>
+<li><code>strokeText</code>：绘制字体</li>
+</ul>
+</li>
+</ul>
+<h3 id="二、视频音频"><a href="#二、视频音频" class="headerlink" title="二、视频音频"></a>二、视频音频</h3><hr>
+<ul>
+<li><p>视频音频格式的简单介绍</p>
+<ul>
+<li>常见的视频格式<ul>
+<li>视频的组成部分：画面、音频、编码格式</li>
+<li>视频编码：H.264、Theora、VP8(google开源)</li>
+</ul>
+</li>
+<li>常见的音频格式<ul>
+<li>视频编码：ACC、MP3、Vorbis</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>HTML5</code>能在完全脱离插件的情况下播放音视频,但是不是所有格式都支持。</p>
+</li>
+<li><p>支持的视频格式：</p>
+<ul>
+<li><code>Ogg=</code>带有<code>Theora</code>视频编码<code>+Vorbis</code>音频编码的<code>Ogg</code>文件</li>
+<li><code>MEPG4=</code>带有H.264视频编码<code>+AAC</code>音频编码的<code>MPEG4</code>文件</li>
+<li><code>WebM=</code>带有<code>VP8</code>视频编码<code>+Vorbis</code>音频编码的<code>WebM</code>格式</li>
+</ul>
+</li>
+</ul>
+<h4 id="Video的使用"><a href="#Video的使用" class="headerlink" title="Video的使用"></a><code>Video</code>的使用</h4><hr>
+<ul>
+<li>单独用法<ul>
+<li>``</li>
+</ul>
+</li>
+<li>带提示用法</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt; video src=&quot;文件地址&quot; controls=&quot;controls&quot;&gt;</span><br><span class="line">	您的浏览器暂不支持video标签。播放视频</span><br><span class="line">&lt;/ video &gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>兼容用法</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt; video  controls=&quot;controls&quot;  width=&quot;300&quot;&gt;</span><br><span class="line">	&lt;source src=&quot;move.ogg&quot; type=&quot;video/ogg&quot; &gt;</span><br><span class="line">	&lt;source src=&quot;move.mp4&quot; type=&quot;video/mp4&quot; &gt;</span><br><span class="line">	您的浏览器暂不支持video标签。播放视频</span><br><span class="line">&lt;/ video &gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>Video</code>的常见属性</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Autoplay</td>
+<td align="left">Autoplay</td>
+<td align="left">视频就绪自动播放</td>
+</tr>
+<tr>
+<td align="left">controls</td>
+<td align="left">controls</td>
+<td align="left">向用户显示播放控件</td>
+</tr>
+<tr>
+<td align="left">Width</td>
+<td align="left">Pixels(像素)</td>
+<td align="left">设置播放器宽度</td>
+</tr>
+<tr>
+<td align="left">Height</td>
+<td align="left">Pixels(像素)</td>
+<td align="left">设置播放器高度</td>
+</tr>
+<tr>
+<td align="left">Loop</td>
+<td align="left">Loop</td>
+<td align="left">播放完是否继续播放该视频，循环播放</td>
+</tr>
+<tr>
+<td align="left">Preload</td>
+<td align="left">load{auto,meta,none}</td>
+<td align="left">规定是否预加载视频。</td>
+</tr>
+<tr>
+<td align="left">Src</td>
+<td align="left">url</td>
+<td align="left">视频url地址</td>
+</tr>
+<tr>
+<td align="left">Poster</td>
+<td align="left">Imgurl</td>
+<td align="left">加载等待的画面图片</td>
+</tr>
+<tr>
+<td align="left">Autobuffer</td>
+<td align="left">Autobuffer</td>
+<td align="left">设置为浏览器缓冲方式，不设置autoply才有效</td>
+</tr>
+</tbody></table>
+<ul>
+<li><code>Video</code>的<code>API</code>方法</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">属性</th>
+<th align="left">事件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">play()</td>
+<td align="left">currentSrc</td>
+<td align="left">play</td>
+</tr>
+<tr>
+<td align="left">pause()</td>
+<td align="left">currentTime</td>
+<td align="left">pause</td>
+</tr>
+<tr>
+<td align="left">load()</td>
+<td align="left">videoWidth</td>
+<td align="left">progress</td>
+</tr>
+<tr>
+<td align="left">canPlayType()</td>
+<td align="left">videoHeight</td>
+<td align="left">error</td>
+</tr>
+</tbody></table>
+<h3 id="三、地理信息与本地存储"><a href="#三、地理信息与本地存储" class="headerlink" title="三、地理信息与本地存储"></a>三、地理信息与本地存储</h3><hr>
+<h4 id="地理位置"><a href="#地理位置" class="headerlink" title="地理位置"></a>地理位置</h4><hr>
+<ul>
+<li><p>经度 : 南北极的连接线</p>
+</li>
+<li><p>纬度 : 东西连接的线</p>
+</li>
+<li><p>位置信息从何而来</p>
+<ul>
+<li><code>IP</code>地址</li>
+<li><code>GPS</code>全球定位系统</li>
+<li><code>Wi-Fi</code>无线网络</li>
+<li>基站</li>
+</ul>
+</li>
+<li><p><code>avigator.geolocation</code></p>
+<ul>
+<li><p>单次定位请求 ：<code>getCurrentPosition</code>(请求成功,请求失败,数据收集方式)</p>
+</li>
+<li><p>请求成功函数</p>
+<ul>
+<li>经度 : <code>coords.longitude</code></li>
+<li>纬度 : <code>coords.latitude</code></li>
+<li>准确度 : <code>coords.accuracy</code></li>
+<li>海拔 : <code>coords.altitude</code></li>
+<li>海拔准确度 : <code>coords.altitudeAcuracy</code></li>
+<li>行进方向 : <code>coords.heading</code></li>
+<li>地面速度 : <code>coords.speed</code></li>
+<li>请求的时间: <code>new Date(position.timestamp)</code></li>
+</ul>
+</li>
+<li><p>请求失败函数</p>
+<ul>
+<li><p>失败编号 ：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>0 : 不包括其他错误编号中的错误</li>
+<li>1 : 用户拒绝浏览器获取位置信息</li>
+<li>2 : 尝试获取用户信息，但失败了</li>
+<li>3 : 设置了<code>timeout</code>值，获取位置超时了</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数据收集 : json的形式</p>
+<ul>
+<li><code>enableHighAcuracy</code> : 更精确的查找，默认<code>false</code></li>
+<li><code>timeout</code> : 获取位置允许最长时间，默认<code>infinity</code></li>
+<li><code>maximumAge</code> : 位置可以缓存的最大时间，默认<code>0</code></li>
+</ul>
+</li>
+<li><p>多次定位请求* : <code>watchPosition</code></p>
+<ul>
+<li>移动设备有用，位置改变才会触发</li>
+<li>配置参数：<code>frequency</code> 更新的频率</li>
+<li>关闭更新请求 : <code>clearWatch</code></li>
+</ul>
+</li>
+<li><p>百度地图<code>API</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;http://api.map.baidu.com/api?v=2.0&amp;ak=qZfInp9MaT9Qa0PoNy4Rmx3Y9W9ZXMfw&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="本地存储"><a href="#本地存储" class="headerlink" title="本地存储"></a>本地存储</h4><hr>
+<ul>
+<li><p><code>Storage</code></p>
+<ul>
+<li><p>```<br>sessionStorage</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - `session`临时回话，从页面打开到页面关闭的时间段</span><br><span class="line">  - 窗口的临时存储，页面关闭，本地存储消失</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  localStorage</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>永久存储（可以手动删除数据）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>Storage</code>的特点</p>
+<ul>
+<li>存储量限制 ( 5M )</li>
+<li>客户端完成，不会请求服务器处理</li>
+<li><code>sessionStorage</code>数据是不共享、 <code>localStorage</code>共享</li>
+</ul>
+</li>
+<li><p><code>Storage API</code></p>
+<ul>
+<li><p>```<br>setItem()</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  :</span><br><span class="line"></span><br><span class="line">  - 设置数据，(`key`,`value`)类型，类型都是字符串</span><br><span class="line">  - 可以用获取属性的形式操作</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  getItem():</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>获取数据，通过<code>key</code>来获取到相应的<code>value</code></li>
+</ul>
+</li>
+<li><p>```<br>removeItem()</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  :</span><br><span class="line"></span><br><span class="line">  - 删除数据，通过key来删除相应的`value`</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  clear()</span><br></pre></td></tr></table></figure>
+
+<p>:</p>
+<ul>
+<li>删除全部存储的值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>存储事件:</p>
+<ul>
+<li>当数据有修改或删除的情况下，就会触发<code>storage</code>事件</li>
+<li>在对数据进行改变的窗口对象上是不会触发的`</li>
+<li><code>Key</code> : 修改或删除的<code>key</code>值，如果调用<code>clear()</code>,<code>key</code>为<code>null</code></li>
+<li><code>newValue</code> : 新设置的值，如果调用<code>removeStorage()</code>,<code>key</code>为<code>null</code></li>
+<li><code>oldValue</code> : 调用改变前的<code>value</code>值</li>
+<li><code>storageArea</code> : 当前的<code>storage</code>对象</li>
+<li><code>url</code> : 触发该脚本变化的文档的url</li>
+<li>注：<code>session</code>同窗口才可以,例子：<code>iframe</code>操作</li>
+</ul>
+</li>
+</ul>
+<h3 id="四、HTML5拖拽"><a href="#四、HTML5拖拽" class="headerlink" title="四、HTML5拖拽"></a>四、HTML5拖拽</h3><hr>
+<ul>
+<li><p>图片自带拖拽功能</p>
+</li>
+<li><p>其他元素可设置<code>draggable</code>属性</p>
+</li>
+<li><p><code>draggable ：true</code></p>
+<ul>
+<li><p>拖拽元素(被拖拽元素对象)事件 :</p>
+<ul>
+<li><code>ondragstart</code> : 拖拽前触发</li>
+<li><code>ondrag</code> :拖拽前、拖拽结束之间，连续触发</li>
+<li><code>ondragend</code> :拖拽结束触发</li>
+</ul>
+</li>
+<li><p>目标元素(拖拽元素被拖到的对象)事件 :</p>
+<ul>
+<li><p><code>ondragenter</code> :进入目标元素触发</p>
+</li>
+<li><p><code>ondragover</code>:进入目标、离开目标之间，连续触发</p>
+</li>
+<li><p><code>ondragleave</code> :离开目标元素触发</p>
+</li>
+<li><p>```<br>ondrop</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">       </span><br><span class="line"></span><br><span class="line">      :在目标元素上释放鼠标触发</span><br><span class="line"></span><br><span class="line">      - 需要在`ondragover`事件里面阻止默认事件</span><br><span class="line"></span><br><span class="line">- 拖拽兼容问题</span><br><span class="line"></span><br><span class="line">  - 火狐浏览器下需设置`dataTransfer`对象才可以拖拽除图片外的其他标签</span><br><span class="line"></span><br><span class="line">    - `dataTransfer`对象</span><br><span class="line"></span><br><span class="line">    - `setData()` : 设置数据 `key`和`value`(必须是字符串)</span><br><span class="line"></span><br><span class="line">    - `getData()` : 获取数据，根据`key`值，获取对应的`value`</span><br><span class="line"></span><br><span class="line">    - `effectAllowed` : 设置光标样式(`none`, `copy`, `copyLink`, `copyMove`, `link`, `linkMove`,`move`, `all` 和`uninitialized`)</span><br><span class="line"></span><br><span class="line">    - `setDragImage` ：三个参数（指定的元素，坐标`X`，坐标`Y`）</span><br><span class="line"></span><br><span class="line">    - ```</span><br><span class="line">      files</span><br></pre></td></tr></table></figure>
+
+<p>： 获取外部拖拽的文件，返回一个</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filesList</span><br></pre></td></tr></table></figure>
+
+<p>列表</p>
+<ul>
+<li><code>filesList</code>下有个<code>type</code>属性，返回文件的类型</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>读取文件信息</p>
+<ul>
+<li><p>```<br>FileReader</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    (读取文件信息)</span><br><span class="line"></span><br><span class="line">    - `readAsDataURL`</span><br><span class="line"></span><br><span class="line">  - 参数为要读取的文件对象</span><br><span class="line"></span><br><span class="line">    - `onload`当读取文件成功完成的时候触发此事件</span><br><span class="line">    - `this. result` 获取读取的文件数据</span><br><span class="line"></span><br><span class="line">### 五、跨文档操作</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">- 跨文档请求</span><br><span class="line"></span><br><span class="line">- 同域跨文档</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    iframe</span><br></pre></td></tr></table></figure>
+
+<p>内页：</p>
+<ul>
+<li>父页面操作子页面：<code>contentWindow</code></li>
+<li>子页面操作父页面：<code>window.top</code>(找到最顶级的父页面)/<code>parent</code>(第一父页面)</li>
+<li>新窗口页：<ul>
+<li>父页面操作子页面：<code>window.open</code></li>
+<li>子页面操作父页面：<code>window.opener</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>不同域跨文档</p>
+<ul>
+<li><p>```<br>postMessage（“发送的数据”,”接收的域”）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    - `message`事件监听</span><br><span class="line">    - `ev.origin`发送数据来源的域</span><br><span class="line">    - `ev.data` 发送的数据</span><br><span class="line"></span><br><span class="line">  - 通过判断发送的数据来执行相应的需求</span><br><span class="line"></span><br><span class="line">- ajax跨域</span><br><span class="line"></span><br><span class="line">  - `XMLHttpRequest` 新增功能</span><br><span class="line"></span><br><span class="line">    - 跨域请求：修改服务端头信息</span><br><span class="line">      - I`E`兼容：`XDomaiRequest`</span><br><span class="line"></span><br><span class="line">  - 进度事件：</span><br><span class="line"></span><br><span class="line">    - ```</span><br><span class="line">      upload.onprogress(ev)</span><br></pre></td></tr></table></figure>
+
+<p>  上传进度(实现文件上传进度条)</p>
+<ul>
+<li><p><code>ev.total</code> 发送文件的总量</p>
+</li>
+<li><p><code>ev.loaded</code> 已发送的量</p>
+</li>
+<li><p><code>FormData</code> 构建提交二进制数据</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2018/01/15/1-html%E4%B8%8Exml%E7%9A%84%E5%8C%BA%E5%88%AB/">html与xml的区别</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-01-15</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/html/">html</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/xml/">xml</a></span><div class="content"><h2 id="xml和html之间的区别有哪些"><a href="#xml和html之间的区别有哪些" class="headerlink" title="xml和html之间的区别有哪些"></a>xml和html之间的区别有哪些</h2><blockquote>
+<p>区别：1、XML用于传输和存储数据，侧重于数据；HTML用于显示数据并关注数据的外观。2、XML区分大小写；HTML不区分大小写。3、XML强制要求使用结束标记；而HTML中没有强制要求使用结束标记。4、XML保留空格；HTML不保留空格。</p>
+</blockquote>
+<p><img src="https://img.php.cn/upload/article/202104/14/2021041410024576422.jpg" alt="img"></p>
+<p>本教程操作环境：windows7系统、HTML5版、Dell G3电脑。</p>
+<h3 id="什么是xml？"><a href="#什么是xml？" class="headerlink" title="什么是xml？"></a><strong>什么是xml？</strong></h3><p>xml是一种可扩展标记语言，用于描述数据，可以以轻松检索和共享的形式存储数据。</p>
+<h3 id="xml的特征："><a href="#xml的特征：" class="headerlink" title="xml的特征："></a><strong>xml的特征：</strong></h3><p>1、XML（可扩展标记语言）是一种标记语言。</p>
+<p>2、XML旨在存储和传输数据。</p>
+<p>3、XMl的创建是为了提供一个易于使用和存储的自描述数据。</p>
+<p>4、XML不是HTML的替代品。</p>
+<p>5、XML旨在实现自我描述。</p>
+<p>6、XML旨在传输数据，而不是显示数据。</p>
+<p>7、XML标签没有预定义，因此我们必须定义好自己的标签才可以使用。</p>
+<p>8、XML独立于平台且与语言无关。</p>
+<h3 id="xml的主要优点："><a href="#xml的主要优点：" class="headerlink" title="xml的主要优点："></a><strong>xml的主要优点：</strong></h3><p>可以使用xml从Microsoft SQL等程序中获取数据，将其转换为XML，然后与其他程序和平台共享这个XML。我们可以在两个通常非常困难的平台之间进行通信。</p>
+<h3 id="xml和html之间的区别："><a href="#xml和html之间的区别：" class="headerlink" title="xml和html之间的区别："></a><strong>xml和html之间的区别：</strong></h3><p><strong><img src="https://img.php.cn//upload/image/422/793/135/1543562587266805.jpg" alt="1543562587266805.jpg"></strong></p>
+<p>1、XML是一种独立于软件和硬件的工具，用于传输和存储数据；它侧重于数据。HTML用于显示数据并关注数据的外观。</p>
+<p>2、XML提供了一个定义标记语言的框架。HTML 本身就是一种标记语言。</p>
+<p>3、XML 区分大小写。HTML 不区分大小写。</p>
+<p>4、XML既不是标签标记语言也不是编程语言。HTML是一种超文本标记语言。</p>
+<p>5、我们可以根据需要定义自己定义XML标签。HTML 有属于自己的预定义标签，不可以用户自己定义。</p>
+<p>6、XML 强制要求使用结束标记。在HTML中，没有必要使用结束标记。</p>
+<p>7、XML是动态的，因为它用于传输数据。HTML是静态的，因为它用于显示数据。</p>
+<p>8、XML 保留空格。HTML 不保留空格。</p>
+</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2018/01/10/1-html-tag/">html-tag</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-01-10</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/html/">html</a></span><div class="content"><h4 id="第二章-html基本结构"><a href="#第二章-html基本结构" class="headerlink" title="第二章 html基本结构"></a>第二章 html基本结构</h4><hr>
+<ul>
+<li>认识HTML：<ul>
+<li><code>html</code>不是一种编程语言，是一种标志语言</li>
+<li>标记语言是由一套标识标签组成的</li>
+<li><code>html</code>使用标签来描述网页</li>
+</ul>
+</li>
+<li><code>html</code>结构：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;&lt;/head&gt;</span><br><span class="line">    &lt;body&gt;&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>不成对出现的标签<br><code> </code> <code> </code> <code> </code> <code> </code></p>
+</li>
+<li><p><strong>HTML 基本标签的讲解：</strong></p>
+<ul>
+<li><p><code> </code> ``标签</p>
+</li>
+<li><p><code>—-</code>仅仅用于标题文本，不要为了产生粗体文本使用它们</p>
+</li>
+<li><p>``标签 段落标签</p>
+</li>
+<li><p>``标签</p>
+</li>
+<li><p>都会让文字产生加粗效果</p>
+<ul>
+<li>``用于强调文本，强度更深，表示重要文本—&gt;用于<code>SEO</code>优化</li>
+<li>``只是视觉加粗效果—&gt;单纯为了产生加粗</li>
+</ul>
+</li>
+<li><p>```</p>
+<em>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<i>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">    </span><br><span class="line">    标签</span><br><span class="line"></span><br><span class="line">    - `em`用于强调文本</span><br><span class="line">    - `i`只是视觉斜体效果</span><br><span class="line">    - ``比``强调更强</span><br><span class="line">    </span><br><span class="line">  - 特殊符号：</span><br><span class="line"></span><br><span class="line">    - `&amp;nbsp`; —-&gt;空格</span><br><span class="line">    - `&amp;gt`; —&gt;大于号</span><br><span class="line">    - `&amp;lt`；—&gt;小于号</span><br><span class="line">    - `&amp;quot`；—&gt;引号</span><br><span class="line">    - `&amp;copy`;–&gt;版权号</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">#### 第三章 html基本标签</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">- `HTMl`基本标签：</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    span</span><br></pre></td></tr></table></figure>
+
+<p>标签</p>
+<ul>
+<li>对被用来组合文档中的行内元素</li>
+<li>注意：span没有固定的格式表现，当对它应用样式时，才会产生视觉上的变化</li>
+</ul>
+</li>
+<li><p>```</p>
+<pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  标签</span><br><span class="line"></span><br><span class="line">  - 文字的格式按源码的排版来显示，我们称之为预处理格式</span><br><span class="line"></span><br><span class="line">- &lt;a&gt;标签—&gt;他有一个必不可少的属性 href</span><br><span class="line"></span><br><span class="line">- 创建锚点和锚链接</span><br><span class="line"></span><br><span class="line">  - 锚点也是一种超链接，是页面内进行跳转的超链接</span><br><span class="line">    - 第一步：创建锚点 ``</span><br><span class="line">    - 第二步：使用创建好的锚点名称 `[内容](#锚点名称)`</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  marquee</span><br></pre></td></tr></table></figure>
+
+标签
+
+- 可以创建一个内容滚动效果</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;marquee direction=&quot;down&quot; loop=&quot;4&quot; onmouseover=this.stop() onmouseout=this.start()&gt;&lt;/marquee&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>direction</code> 表示滚动方向，取值有（left,right,up,down,默认left）</li>
+<li><code>loop</code>表示滚动循环的次数，默认为无限循环</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">onmouseover=this.stop()  onmouseover=this.start()  scrollamout=&quot;1&quot;(滚动速度)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>表示当鼠标移上区域的时候停止滚动，鼠标移开继续滚动</li>
+</ul>
+<hr>
+<h4 id="第四章-img图片标签与路径"><a href="#第四章-img图片标签与路径" class="headerlink" title="第四章 img图片标签与路径"></a>第四章 img图片标签与路径</h4><hr>
+<ul>
+<li><p>图片标签与路径：</p>
+<ul>
+<li>常见图片格式 <code>jpg</code> <code>png</code> <code>gif</code></li>
+<li><code>Gif</code> （只支持全透明）</li>
+<li><code>Jpeg</code> /<code>jpg</code></li>
+<li><code>Png</code> 半/全透明都支持</li>
+</ul>
+</li>
+<li><p>图片标签写法 ：</p>
+<ul>
+<li>``</li>
+</ul>
+</li>
+<li><p>图片四要素：</p>
+<ul>
+<li><code>src=&quot;&quot;</code> 图片路径</li>
+<li><code>alt=&quot;&quot;</code> 图片含义</li>
+<li><code>width=&quot;&quot;</code> 图片宽度 和图片大小保持一致</li>
+<li><code>height=&quot;&quot;</code> 图片高度 和图片大小保持一致</li>
+<li><code>title=&quot;&quot;</code></li>
+</ul>
+</li>
+<li><p>路径知识：</p>
+<ul>
+<li>相对路径、绝对路径：<ul>
+<li>相对路径：(Relative Path) 相对于该文件的路径；</li>
+<li>绝对路径：(Absolute Path) 从磁盘出发的路径；</li>
+</ul>
+</li>
+<li>&lt;img src=”” …… align=”” /&gt; align属性–设置图片与后面文字的位置关系值–top、bottom、middle、absmiddle、left、right</li>
+</ul>
+</li>
+<li><p>在静态页面中：</p>
+<ul>
+<li><p><code>/</code>开头表示根目录；</p>
+</li>
+<li><p><code>./</code>表示当前目录；（斜画线前面一个点）</p>
+</li>
+<li><p><code>../</code>上级目录；（斜画线前面两个点）</p>
+</li>
+<li><p>直接用文件名不带/也表示同一目录</p>
+</li>
+<li><p>这些都是相对于当前文件的位置来说的，如果用绝对路径的话就是写全了。</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="第五章-三种列表的讲解"><a href="#第五章-三种列表的讲解" class="headerlink" title="第五章 三种列表的讲解"></a>第五章 三种列表的讲解</h4><hr>
+<ul>
+<li><p>三种列表的知识讲解：</p>
+<ul>
+<li><p>```</p>
+<ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">无序列表</span><br><span class="line"></span><br><span class="line">- 无序列表是一个没有顺序项目的列表，此列表项默认粗体圆点进行标识</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 1. 有序列表</span><br><span class="line"></span><br><span class="line">  2. - 有序列表也是一列项目，只是列表项目使用的是数字进行标记。 有序列表始于 `` 标签。每个列表项始于 ``标签。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ol>
+<li>内容一</li>
+<li>内容二</li>
+<li>内容三</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 列表符号</span><br><span class="line">  - 无序列表-列表符号:</span><br><span class="line">    - `type=&quot;circle&quot;` 空心圆 `type=“disc”` 实心圆 默认值 `type=&quot;square&quot;` 方块符</span><br><span class="line">  - 有序列表-列表符号</span><br><span class="line">    - `type=&quot;A&quot;` A B C D</span><br><span class="line">    - `type=&quot;a&quot;` a b c d</span><br><span class="line">    - `type=&quot;1&quot;` 1 2 3 4 默认值type=”I” I II III type=”i” i ii iii</span><br><span class="line">  - 列表嵌套</span><br><span class="line">  - 无序列表-嵌套</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>柚子
+<ul>
+<li>沙田柚</li>
+<li>蜜柚</li>
+</ul>
+</li>
+<li>荔枝</li>
+<li>苹果</li></ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 有序列表-嵌套</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ol>
+<li>茶
+<ul>
+<li>红茶</li>
+<li>绿茶</li>
+</ul>
+</li>
+<li>果汁</li>
+<li>牛奶</li></ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 定义列表</span><br><span class="line">  - 定义列表不仅仅是一列项目，而是项目及其注释的组合。定义列表以 `` 标签开始。每个定义列表项以 ``开始。每个自定义列表项的定义以 `` 开始。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<dl>  
+ <dt>pc网页制作</dt>  
+ <dd>学习DIV+CSS JS JQ 项目实战</dd>  
+ <dt>手机网页制作</dt>  
+ <dd>手机网页制作实战</dd>
+</dl>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- `dd`是对`dt`的解释</span><br><span class="line">  - `&lt; dl&gt;&lt; /dl&gt;`用来创建一个普通的列表,</span><br><span class="line">  - `&lt; dt&gt;&lt; /dt&gt;`用来创建列表中的上层项目，</span><br><span class="line">  - `&lt; dd&gt;&lt; /dd&gt;`用来创建列表中最下层项目，</span><br><span class="line">  - `&lt; dt&gt;&lt; /dt&gt;`和`&lt; dd&gt;&lt; /dd&gt;`都必须放在`&lt; dl&gt;&lt; /dl&gt;`标志对之间。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<dl>
+<dt>中国城市</dt>
+<dd>北京 </dd>
+<dd>上海 </dd>
+<dd>广州 </dd>
+<dt>美国城市</dt>
+<dd>华盛顿 </dd>
+<dd>芝加哥 </dd>
+<dd>纽约 </dd>
+</dl>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- `dl`是d`efinition list`的缩写</span><br><span class="line">- `dt`是`definition title`的缩写</span><br><span class="line">- `dd`是d`efinition description`的缩写</span><br><span class="line"></span><br><span class="line">- `list-style`属性具有三个属性分量：</span><br><span class="line">- `list-style-position` ：设置列表项图标的位置，位于文本内或者文本外</span><br><span class="line">- `list-style-type`： 设置列表项图标的类型</span><br><span class="line">- `list-style-image`：使用图像设置列表项图标</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">#### 第六章 表单元素(上)</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">- 表单标签:</span><br><span class="line"></span><br><span class="line">  - ``表单标签</span><br><span class="line"></span><br><span class="line">    - ```</span><br><span class="line">      &lt;form&gt;</span><br></pre></td></tr></table></figure>
+
+<p>  表单是一个包含表单元素的区域，包括起来的都是表单的内容</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;form&gt;</span><br><span class="line"> &lt;input type=&quot;text&quot;/&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>HTML标签 - <code>Action</code>和确认按钮：</p>
+<ul>
+<li>当用户单击确认按钮时，表单的内容会被传送到另一个文件。表单的动作属性定义了目的文件的文件名。由动作属性定义的这个文件通常会对接收到的输入数据进行相关的处理。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;html.do&quot; method=&quot;get&quot;&gt;    </span><br><span class="line">        username:  &lt;input type=&quot;text&quot; name=&quot;user&quot; /&gt;   </span><br><span class="line">        &lt;input type=&quot;submit&quot; value=&quot;提  交&quot; /&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>HTML</code>标签 - 隐藏域隐藏标签：</li>
+<li>隐藏域在页面中对于用户是不可见的，在表单中插入隐藏域的目的在于收集或发送信息，以利于被处理表单的程序所使用。浏览者单击发送按钮发送表单的时候，隐藏域的信息也被一起发送到服务器</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;form&gt;        </span><br><span class="line">     &lt;input type=&quot;hidden&quot; name=&quot;hid&quot; value=&quot;value&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>``标签的掌握</p>
+<ul>
+<li>常用<code>type</code>类型：<ul>
+<li>``</li>
+<li><code>type=&quot;text&quot;</code> 单行文本输入框</li>
+<li><code>type=&quot;password&quot;</code> 密码（<code>maxlength=&quot;&quot;</code>）</li>
+<li><code>type=&quot;radio&quot;</code> 单项选择（<code>checked=&quot;checked&quot;</code>）</li>
+<li><code>type=&quot;checkbox&quot;</code> 多项选择</li>
+<li><code>type=&quot;button&quot;</code> 按钮</li>
+<li><code>type=&quot;submit&quot;</code> 提交 <code>type=&quot;image&quot;</code>图片提交</li>
+<li><code>type=&quot;file&quot;</code> 上传文件</li>
+<li><code>type=&quot;reset&quot;</code>重置</li>
+<li><code>type=&quot;hidden&quot;</code> 隐藏</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>关于表单中的设置默认值：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; name=&quot;&quot; value=&quot;今天心情不错&quot; /&gt;</span><br><span class="line">&lt;input type=&quot;radio&quot; name=&quot;&quot; value=&quot;&quot; checked=&quot;checked&quot;&gt;</span><br><span class="line">&lt;input type=&quot;checkbox&quot; name=&quot;&quot; value=&quot;&quot; checked=&quot;checked&quot;&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;select name=&quot;&quot; &gt;</span><br><span class="line"> &lt;option  value=&quot;&quot;&gt;&lt;/option&gt;</span><br><span class="line"> &lt;option  value=&quot;&quot; selected=&quot;selected&quot;&gt;&lt;/option&gt;</span><br><span class="line">&lt;select&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>textarea</code>没有默认值</p>
+</li>
+<li><p>``标签的使用</p>
+<ul>
+<li><p>``</p>
+<ul>
+<li><code>label</code> 元素不会向用户呈现任何特殊效果。</li>
+<li>不过，它为鼠标用户改进了可用性。</li>
+<li>如果您在 <code>label</code> 元素内点击文本，就会触发此控件。</li>
+<li>就是说，当用户选择该标签时，浏览器就会自动将焦点转到和标签相关的表单控件上。</li>
+</ul>
+</li>
+<li><p>`` 标签的<code>for</code> 属性应当与相关元素的 <code>id</code>属性相同。</p>
+</li>
+<li><p>例子：（重要—注册表单–用户体验–必做）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;单向选择&lt;/p&gt;</span><br><span class="line">&lt;label for=&quot;male&quot;&gt;男：&lt;/label&gt;&lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;male&quot;/&gt;</span><br><span class="line">&lt;label for=&quot;nv&quot;&gt;女：&lt;/label&gt;&lt;input type=&quot;radio&quot; name=&quot;sex&quot;checked=&quot;check&quot;/&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="第七章-表单和表格-下"><a href="#第七章-表单和表格-下" class="headerlink" title="第七章 表单和表格(下)"></a>第七章 表单和表格(下)</h4><hr>
+<ul>
+<li><p>表单和表格标签：</p>
+<ul>
+<li>``文本域标签</li>
+<li>``标签：</li>
+<li>``是文本域标签，可以在其中插入一段文字内容，它有两个常用属性<code>rows</code>和<code>cols</code></li>
+</ul>
+</li>
+<li><p>注意：</p>
+<ul>
+<li><code>rows</code>表示这个文本域有多少行</li>
+<li><code>cols</code>表示这个文本域有多少列</li>
+</ul>
+</li>
+<li><p>除了这两个属性它还有<code>readonly</code>（只读，文本域的内容无法改变，相当于协议）和<code>title</code>（鼠标放上提示）</p>
+</li>
+<li><p>``标签的掌握</p>
+<ul>
+<li><p>注：当提交表单时，浏览器会提交选定的项目，或者收集用逗号分隔的多个选项，将其合成一个单独的参数列表，并且在将</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;select&gt;</span><br></pre></td></tr></table></figure>
+
+<p>表单数据提交给服务器时包括</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name</span><br></pre></td></tr></table></figure>
+
+<p>属性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;form&gt;      </span><br><span class="line">    &lt;select name=&quot;&quot;  id=&quot;&quot;&gt;</span><br><span class="line">         &lt;option value=&quot;1&quot;&gt;1月&lt;/option&gt;  </span><br><span class="line">          &lt;option value=&quot;2&quot;&gt;2月&lt;/option&gt;      </span><br><span class="line">&lt;/select&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>常用到的属性：<code>disabled=“disabled” name=&quot;sel&quot; size=&quot;2&quot;</code></p>
+</li>
+<li><p>``表格标签</p>
+</li>
+<li><table>表格标签：<table>是表格标签，可以用它定义一个表格。</li>
+<li><p>注意：``的<code>border</code>属性不能少</p>
+</li>
+<li><p> `标签的使用</p>
+</li>
+<li><p>行标签：</p>
+<ul>
+<li>可以定义表格中的一行，一个&lt;<code>tr&gt;</code>表示一行。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;table border=&quot;1&quot;&gt;</span><br><span class="line">&lt;tr&gt;</span><br><span class="line"> &lt;td&gt;姓名&lt;/td&gt;</span><br><span class="line"> &lt;td&gt;性别&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line"></span><br><span class="line">&lt;tr&gt;</span><br><span class="line"> &lt;td&gt;姓名&lt;/td&gt;</span><br><span class="line"> &lt;td&gt;性别&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>`单元格标签:</p>
+<ul>
+<li><pre><code>&lt;td&gt;
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">可以定义表格中的一个单元格，</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+&lt;td&gt;&lt;/td&gt;
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">表示一个单元格。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+&lt;table border=&quot;1&quot;&gt;
+&lt;tr&gt;
+&lt;td &gt;姓名&lt;/td&gt;
+&lt;td&gt;性别&lt;/td&gt;
+&lt;td&gt;爱好&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+</li>
+<li><p><code>border-collapse</code> 属性设置是否将表格边框折叠为单一边框：</p>
+</li>
+<li><p><code>border-collapse:collapse</code>;</p>
+</li>
+<li><p><code>colspan</code>左右合并</p>
+</li>
+<li><p><code>rowspan</code>上下合并</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>第一部分总结</strong>：</p>
+<ul>
+<li><p>非可视化标签：<code>head</code> <code>meta</code> <code>style</code> <code>scrpit.</code>..</p>
+</li>
+<li><p>可视化标签：<code>img</code> <code>div</code> <code>span</code> <code>a</code> <code>ul</code> <code>li</code>…</p>
+</li>
+<li><p>只有可视化标签，才能用<code>css</code>改变它</p>
+</li>
+<li><p>单标签：<code>meta</code> <code>link</code> <code>base</code> <code>img</code> <code>input</code> <code>br</code> <code>hr</code></p>
+</li>
+<li><p>双标签：<code>html</code> <code>head</code> <code>body</code> <code>div</code> <code>a</code> <code>p</code> <code>span</code> ..<code>ul</code> <code>li</code> <code>ol</code> <code>dl</code> ….</p>
+</li>
+<li><p><strong>常用可视化标签</strong></p>
+<ul>
+<li><p><code>div</code></p>
+<ul>
+<li>一般用它来布局</li>
+</ul>
+</li>
+<li><p>a</p>
+<p>超链接标签</p>
+<ul>
+<li><code>href</code>*属性：设置跳转的网页地址</li>
+<li><code>target</code>属性：设置跳转的目标</li>
+<li>结论：凡事页面可以点击跳转或者表单提交的文字，都用<code>a</code>标签</li>
+</ul>
+</li>
+<li><p><code>img</code></p>
+<ul>
+<li><code>src</code>*属性用来设置图片的url数据</li>
+<li><code>alt</code>提供给搜索引擎搜索的</li>
+<li><code>width</code></li>
+<li><code>height</code></li>
+<li>结论 ：显示图片</li>
+</ul>
+</li>
+<li><p>ul li</p>
+<ul>
+<li>列表</li>
+<li>结论：只要将来设计页面中有固定样式的列表，就用ul和li</li>
+</ul>
+</li>
+<li><p><code>table</code> <code>caption</code> <code>tr</code> <code>td (th)</code></p>
+<ul>
+<li>慢慢已经被淘汰了 被ul li代替</li>
+<li>如果是合并竖排的就是合并行（<code>rowspan</code>）</li>
+<li>如果是合并横排的就是合并列（<code>colspan</code>）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2018/01/03/3-js%E9%97%AD%E5%8C%85/">闭包</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-01-03</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/javascript/">javascript</a></span><div class="content"><blockquote>
+<p>闭包的形成跟变量的作用域以及变量的生存周期密切相关</p>
+</blockquote>
+<h2 id="一、变量的作用域-是指变量的有效范围"><a href="#一、变量的作用域-是指变量的有效范围" class="headerlink" title="一、变量的作用域,是指变量的有效范围"></a>一、变量的作用域,是指变量的有效范围</h2><ul>
+<li>当在函数中声明一个变量的时候,如果该变量前面没有带上关键字 <code>var</code>,这个变量就会成为全局变量 ,这当然是一种很容易造成命名冲突的做法。<br>另外一种情况是用 <code>var</code> 关键字在函数中声明变量,这时候的变量即是局部变量,只有在该函数内部才能访问到这个变量,在函数外面是访问不到的。</li>
+</ul>
+<p>例：变量的搜索是从内到外而非从外到 内的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var a=1;</span><br><span class="line">var func1 = function()&#123; </span><br><span class="line">    var b=2;</span><br><span class="line">    var func2 = function()&#123; </span><br><span class="line">        var c=3;</span><br><span class="line">        console.log ( b ); // 输出:2 </span><br><span class="line">        console.log ( a );// 输出:1</span><br><span class="line">    &#125;</span><br><span class="line">    func2();</span><br><span class="line">    console.log(c);//输出:Uncaught ReferenceError: c is not defined</span><br><span class="line">&#125;; </span><br><span class="line">func1();</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、变量的生存周期"><a href="#二、变量的生存周期" class="headerlink" title="二、变量的生存周期"></a>二、变量的生存周期</h2><ul>
+<li>对于全局变量来说,全局变量的生存周期当然是的永久,除非我们主动销毁这个全局变量。</li>
+<li>而对于在函数内用<code>var</code>关键字声明的局部变量来说,当退出函数时,这些局部变量即失去了 它们的价值,它们都会随着函数的调用的结束而销毁</li>
+</ul>
+<p>例一：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var func = function()&#123; </span><br><span class="line">    var a=1;</span><br><span class="line">    return function()&#123; </span><br><span class="line">        a++;</span><br><span class="line">        console.log(a);</span><br><span class="line">    &#125; </span><br><span class="line">&#125;;</span><br><span class="line">var f=func();</span><br><span class="line">f();// 输出:2 </span><br><span class="line">f();// 输出:3</span><br><span class="line">f();// 输出:4</span><br><span class="line">f();// 输出:5</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>跟我们之前的结论相反,上面的例子在当退出函数后,局部变量<code>a</code> 并没有消失,而是似乎一直在某个地方 存活着。这是因为当执行 <code>var f = func();</code>时,<code>f</code> 返回了一个名函数的引用,它可以问到<code>func()</code> 被调用时产生的环境,而局部变量 <code>a</code> 一直处在这个环境里。既然外局部变量所在的环境还能被外 界访问,这个局部变量就有了不被销毁的理由。在这里生了一个闭包结构,局部变量的声明看起来被延续了。</li>
+</ul>
+<p>例二，假设页面上有 5 个 div 节点,我们通过循环来给每个 div绑定 onclick 事件,按照索引顺序,点击第 1 个 div 时弹出 0,点击第 2 个 div 时出 1,以此类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var nodes = document.getElementsByTagName( &#x27;div&#x27; );</span><br><span class="line">for(var i=0,len=nodes.length;i&amp;lt;len;i++)&#123; </span><br><span class="line">    nodes[ i ].onclick = function()&#123;</span><br><span class="line">        alert(i); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>测试这段代码会发现,无论点击哪个 div,最后弹出的结果都是 5</li>
+<li>这是因为 <code>div</code> 节点的 <code>onclick</code> 事件是被异步触发的,当事件被触发的时候,<code>for</code>循环早已结束,此时 i 的值已经是 <code>5</code>,</li>
+<li>所以在 <code>div</code>的 <code>onclick</code> 事件函数中顺着作用域链从内到外查找变量 i 时,查找到的值总是 <code>5</code>。</li>
+<li>解决方法是在闭包的帮助下,每次循环的<code>i</code> 值都封闭起来。当在事件函数中顺着作用域链从内到外查找变量 <code>i</code>时,会先找到被封闭在闭包环境中的<code>i,</code>如果有<code>5</code>个<code>div</code>,这里的<code>i</code>分别 是 <code>0,1,2,3,4</code></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for(var i=0,len=nodes.length;i&amp;lt;len;i++)&#123; </span><br><span class="line">    (function( i )&#123;</span><br><span class="line">        nodes[ i ].onclick = function()&#123; </span><br><span class="line">            console.log(i);</span><br><span class="line">        &#125; </span><br><span class="line">    &#125;)(i)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、闭包的作用"><a href="#三、闭包的作用" class="headerlink" title="三、闭包的作用"></a>三、闭包的作用</h2><h3 id="1、封装变量—-闭包可以帮助一些不需要暴露在全局的变量封装成“私有变量”"><a href="#1、封装变量—-闭包可以帮助一些不需要暴露在全局的变量封装成“私有变量”" class="headerlink" title="1、封装变量—-闭包可以帮助一些不需要暴露在全局的变量封装成“私有变量”"></a>1、封装变量—-闭包可以帮助一些不需要暴露在全局的变量封装成“私有变量”</h3><ul>
+<li>例一，计算乘积</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var mult = function()&#123; </span><br><span class="line">    var a=1;</span><br><span class="line">    for(var i=0,l=arguments.length;i&amp;lt;l;i++)&#123; </span><br><span class="line">        a = a * arguments[i];</span><br><span class="line">    &#125;</span><br><span class="line">    return a; </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、延续局部变量的寿命"><a href="#2、延续局部变量的寿命" class="headerlink" title="2、延续局部变量的寿命"></a>2、延续局部变量的寿命</h3><h2 id="四、闭包与内存泄漏"><a href="#四、闭包与内存泄漏" class="headerlink" title="四、闭包与内存泄漏"></a>四、闭包与内存泄漏</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function a() &#123;</span><br><span class="line">    var i = 0;</span><br><span class="line"></span><br><span class="line">    function b() &#123;</span><br><span class="line">        console.log(++i);</span><br><span class="line">    &#125;</span><br><span class="line">    return b;</span><br><span class="line">&#125;</span><br><span class="line">var c = a();</span><br><span class="line">c();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>首先有一个封闭的函数<code>a</code>（即自定义的一个<code>function a()</code>方法），该函数内部的变量<code>b</code>（局部变量/局部方法）外部无法直接调用；但如果把这个函数赋值给一个全部变量<code>c</code>时，</li>
+<li>全局变量c就获取到了函数局部变量b的值，从而使局部变量<code>b</code>的值得到了保存，即延长了一个局部变量<code>b</code>的生命周期，除非主动销毁这个全局变量<code>c</code>。<br>此时，我们也就制造出来了一个“闭包”。简单说“闭包是指有权限访问另一个函数作用域的变量的函数”。</li>
+<li>在这个过程中，因为局部变量b的声明周期延长，使得<code>Javascript</code>的垃圾回收机制不会收回函数<code>a</code>所占用的资源,因为函数a的局部变量<code>b</code>的执行需要依赖函数a中的变量。</li>
+</ul>
+</div><hr></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/13/"><i class="fa fa-chevron-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/15/"><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F6%2F53cca8e7873e6.jpg&amp;refer=http%3A%2F%2Fpic1.win4000.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1664449271&amp;t=4f4642aaba02226ad62910f50b366e4b)"><div class="layout" id="footer"><div class="copyright">&copy;2018 - 2022 By ChengWei</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">hitokoto</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span><span></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/lib/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.1"></script><script src="/js/fancybox.js?version=1.9.1"></script><script src="/js/sidebar.js?version=1.9.1"></script><script src="/js/copy.js?version=1.9.1"></script><script src="/js/fireworks.js?version=1.9.1"></script><script src="/js/transition.js?version=1.9.1"></script><script src="/js/scroll.js?version=1.9.1"></script><script src="/js/head.js?version=1.9.1"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>

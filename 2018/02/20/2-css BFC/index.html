@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="css-BFC"><meta name="keywords" content="css"><meta name="author" content="ChengWei"><meta name="copyright" content="ChengWei"><title>css-BFC | Chengcw'博客</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.1"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://v1.hitokoto.cn/?encode=js&amp;charset=utf-8&amp;select=.footer_custom_text" defer></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  hexoVersion: '5.4.2'
+} </script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Chengcw'博客" type="application/atom+xml">
+</head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#BFC-%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">BFC 是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%A7%A6%E5%8F%91-BFC"><span class="toc-number">2.</span> <span class="toc-text">如何触发 BFC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BFC%E5%B8%83%E5%B1%80%E8%A7%84%E5%88%99"><span class="toc-number">3.</span> <span class="toc-text">BFC布局规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BFC%E7%9A%84%E4%BD%9C%E7%94%A8%E5%8F%8A%E5%8E%9F%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">BFC的作用及原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">5.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://wx2.sinaimg.cn/thumb150/008soxMJly1h0v1m20khej30u00u0td0.jpg"></div><div class="author-info__name text-center">ChengWei</div><div class="author-info__description text-center"></div><div class="follow-button"><a target="_blank" rel="noopener" href="https://github.com/USERNAME">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">150</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">27</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">24</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F6%2F53cca8e7873e6.jpg&amp;refer=http%3A%2F%2Fpic1.win4000.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1664449271&amp;t=4f4642aaba02226ad62910f50b366e4b)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Chengcw'博客</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">首页</a><a class="site-page" href="/archives">文章</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">css-BFC</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-02-20</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h3 id="BFC-是什么？"><a href="#BFC-是什么？" class="headerlink" title="BFC 是什么？"></a>BFC 是什么？</h3><ul>
+<li><code>BFC</code> (<code>Block Formatting Contexts</code>) 即块级格式化上下文，从样式上看，它与普通的容器没有什么区别，但是从功能上，<code>BFC</code> 可以看作是隔离了的独立容器，容器里面的元素不会在布局上影响到外面的元素，并且 <code>BFC</code>具有普通容器没有的一些特性，例如可以包含浮动元素，使到它可以包含浮动元素，从而防止出现高度塌陷的问题</li>
+</ul>
+<hr>
+<h3 id="如何触发-BFC"><a href="#如何触发-BFC" class="headerlink" title="如何触发 BFC"></a>如何触发 BFC</h3><ul>
+<li><p>触发 BFC 的条件</p>
+<ul>
+<li><p>浮动元素，<code>float</code> 除 <code>none</code> 以外的值</p>
+</li>
+<li><p>绝对定位元素，<code>position</code>（<code>absolute</code>，<code>fixed</code>）</p>
+</li>
+<li><p><code>display</code> 为以下其中之一的值 <code>inline-blocks</code>，<code>table-cells</code>，<code>table-captions</code></p>
+</li>
+<li><p><code>overflow</code> 除了 <code>visible</code> 以外的值（<code>hidden</code>，<code>auto</code>，<code>scroll</code>）</p>
+</li>
+<li><p>在CSS3中，BFC叫做Flow Root，并增加了一些触发条件：</p>
+<ul>
+<li><code>display</code> 的 <code>table-caption</code> 值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>position</code> 的 <code>fixed</code> 值，其实 <code>fixed</code> 是 <code>absolute</code> 的一个子类，因此在 <code>CSS2.1</code> 中使用这个值也会触发 <code>BFC</code> ，只是在<code>CSS3</code> 中更加明确了这一点</p>
+</li>
+</ul>
+<hr>
+<h3 id="BFC布局规则"><a href="#BFC布局规则" class="headerlink" title="BFC布局规则"></a>BFC布局规则</h3><ul>
+<li>内部的<code>Box</code>会在垂直方向，一个接一个地放置。</li>
+<li><code>Box</code>垂直方向的距离由<code>margin</code>决定。属于同一个<code>BFC</code>的两个相邻<code>Box</code>的<code>margin</code>会发生重叠</li>
+<li>每个元素的<code>margin box</code>的左边， 与包含块<code>border box</code>的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如 此。</li>
+<li><code>BFC</code>的区域不会与<code>float box</code>重叠。</li>
+<li><code>BFC</code>就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。</li>
+<li>计算<code>BFC</code>的高度时，浮动元素也参与计算</li>
+</ul>
+<hr>
+<h3 id="BFC的作用及原理"><a href="#BFC的作用及原理" class="headerlink" title="BFC的作用及原理"></a>BFC的作用及原理</h3><ul>
+<li><strong>自适应两栏布局</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">       width: 300px;</span><br><span class="line">       position: relative;</span><br><span class="line">   &#125;</span><br><span class="line">   .aside &#123;</span><br><span class="line">       width: 100px;</span><br><span class="line">       height: 150px;</span><br><span class="line">       float: left;</span><br><span class="line">       background: #f66;</span><br><span class="line">   &#125;</span><br><span class="line">   .main &#123;</span><br><span class="line">       height: 200px;</span><br><span class="line">       background: #fcc;</span><br><span class="line">   &#125;</span><br><span class="line"> &lt;body&gt;</span><br><span class="line">       &lt;div class=&quot;aside&quot;&gt;&lt;/div&gt;</span><br><span class="line">       &lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://p1.qhimg.com/d/inn/4055c62a/4dca44a927d4c1ffc30e3ae5f53a0b79.png" alt="img"></p>
+<ul>
+<li>根据BFC布局规则第3条：<ul>
+<li>每个元素的<code>margin box</code>的左边， 与包含块<code>border box</code>的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。</li>
+</ul>
+</li>
+<li>因此，虽然存在浮动的元素<code>aslide</code>，但<code>main</code>的左边依然会与包含块的左边相接触</li>
+<li>根据<code>BFC</code>布局规则第四条：<ul>
+<li><code>BFC</code>的区域不会与<code>float box</code>重叠</li>
+</ul>
+</li>
+<li>我们可以通过通过触发<code>main</code>生成<code>BFC</code>， 来实现自适应两栏布局</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.main &#123;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>当触发<code>main</code>生成<code>BFC</code>后，这个新的<code>BFC</code>不会与浮动的<code>aside</code>重叠。因此会根据包含块的宽度，和<code>aside</code>的宽度，自动变窄。效果如下：</li>
+</ul>
+<p><img src="http://p6.qhimg.com/t01077886a9706cb26b.png" alt="img"></p>
+<ul>
+<li><strong>清除内部浮动</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">.par &#123;</span><br><span class="line">    border: 5px solid #fcc;</span><br><span class="line">    width: 300px;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">.child &#123;</span><br><span class="line">    border: 5px solid #f66;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;par&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://p1.qhimg.com/t016035b58195e7909a.png" alt="img"></p>
+<ul>
+<li><p>根据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BFC</span><br></pre></td></tr></table></figure>
+
+<p>布局规则第六条：</p>
+<ul>
+<li>计算<code>BFC</code>的高度时，浮动元素也参与计算</li>
+</ul>
+</li>
+<li><p>为达到清除内部浮动，我们可以触发<code>par</code>生成<code>BFC</code>，那么<code>par</code>在计算高度时，<code>par</code>内部的浮动元素<code>child</code>也会参与计算</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.par &#123;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://p2.qhimg.com/t016bbbe5236ef1ffd5.png" alt="img"></p>
+<ul>
+<li><strong>防止垂直 margin 重叠</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">p &#123;</span><br><span class="line">    color: #f55;</span><br><span class="line">    background: #fcc;</span><br><span class="line">    width: 200px;</span><br><span class="line">    line-height: 100px;</span><br><span class="line">    text-align: center;</span><br><span class="line">    margin: 100px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;p&gt;Haha&lt;/p&gt;</span><br><span class="line">&lt;p&gt;Hehe&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://p5.qhimg.com/t01b47b8b7d153c07cc.png" alt="img"></p>
+<ul>
+<li>两个<code>p</code>之间的距离为<code>100px</code>，发送了<code>margin</code>重叠</li>
+<li>根据BFC布局规则第二条：<ul>
+<li><code>Box</code>垂直方向的距离由<code>margin</code>决定。属于同一个<code>BFC</code>的两个相邻Box的<code>margin</code>会发生重叠</li>
+</ul>
+</li>
+<li>我们可以在<code>p</code>外面包裹一层容器，并触发该容器生成一个<code>BFC</code>。那么两个<code>P</code>便不属于同一个<code>BFC</code>，就不会发生<code>margin</code>重叠了</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.wrap &#123;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line">p &#123;</span><br><span class="line">    color: #f55;</span><br><span class="line">    background: #fcc;</span><br><span class="line">    width: 200px;</span><br><span class="line">    line-height: 100px;</span><br><span class="line">    text-align: center;</span><br><span class="line">    margin: 100px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;p&gt;Haha&lt;/p&gt;</span><br><span class="line">&lt;div class=&quot;wrap&quot;&gt;</span><br><span class="line">    &lt;p&gt;Hehe&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://p3.qhimg.com/t0118d1d2badbb00521.png" alt="img"></p>
+<hr>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li><p>其实以上的几个例子都体现了</p>
+<p>布局规则第五条</p>
+<ul>
+<li><code>BFC</code>就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此</li>
+</ul>
+</li>
+<li><p>因为<code>BFC</code>内部的元素和外部的元素绝对不会互相影响，因此， 当<code>BFC</code>外部存在浮动时，它不应该影响<code>BFC</code>内部<code>Box</code>的布局，<code>BFC</code>会通过变窄，而不与浮动有重叠。同样的，当<code>BFC</code>内部有浮动时，为了不影响外部元素的布局，<code>BFC</code>计算高度时会包括浮动的高度。避免<code>margin</code>重叠也是这样的一个道理</p>
+</li>
+</ul>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">ChengWei</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2018/02/20/2-css BFC/">http://example.com/2018/02/20/2-css BFC/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/css/">css</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2018/02/21/2-css-%E6%A0%87%E5%87%86%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E5%92%8CIE%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/"><i class="fa fa-chevron-left">  </i><span>标准盒子模型和IE盒子模型</span></a></div><div class="next-post pull-right"><a href="/2018/02/07/1-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/"><span>移动端像素比调试</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F6%2F53cca8e7873e6.jpg&amp;refer=http%3A%2F%2Fpic1.win4000.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1664449271&amp;t=4f4642aaba02226ad62910f50b366e4b)"><div class="layout" id="footer"><div class="copyright">&copy;2018 - 2022 By ChengWei</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">hitokoto</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/lib/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.1"></script><script src="/js/fancybox.js?version=1.9.1"></script><script src="/js/sidebar.js?version=1.9.1"></script><script src="/js/copy.js?version=1.9.1"></script><script src="/js/fireworks.js?version=1.9.1"></script><script src="/js/transition.js?version=1.9.1"></script><script src="/js/scroll.js?version=1.9.1"></script><script src="/js/head.js?version=1.9.1"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>
